@@ -1,0 +1,24 @@
+{
+  "name": "@cinagroup/brand",
+  "version": "1.1.0",
+  "description": "Versioned CinaGroup and product brand assets, tokens, and metadata.",
+  "type": "module",
+  "license": "SEE LICENSE IN BRAND_POLICY.md",
+  "files": [
+    "assets",
+    "products",
+    "brand.json",
+    "BRAND_GUIDELINES.md",
+    "BRAND_POLICY.md",
+    "checksums.sha256"
+  ],
+  "exports": {
+    "./brand.json": "./brand.json",
+    "./products/cinaseek": "./products/cinaseek/brand.json",
+    "./products/cinaseek/terminology": "./products/cinaseek/terminology.json",
+    "./products/cinaseek/tokens.css": "./products/cinaseek/tokens.css"
+  },
+  "scripts": {
+    "test": "node scripts/validate.mjs"
+  }
+}

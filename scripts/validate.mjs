@@ -42,6 +42,31 @@ for (const path of Object.values(brand.assets)) {
   await readFile(resolve(root, path));
 }
 
+if (brand.schemaVersion !== 1 || typeof brand.assetVersion !== "string") {
+  throw new Error("invalid root brand manifest");
+}
+
+const hexColor = /^#[0-9A-F]{6}$/;
+for (const [productId, manifestPath] of Object.entries(brand.products ?? {})) {
+  const absoluteManifestPath = resolve(root, manifestPath);
+  const productRoot = dirname(absoluteManifestPath);
+  const product = JSON.parse(await readFile(absoluteManifestPath, "utf8"));
+  if (product.schemaVersion !== 1 || product.product?.slug !== productId ||
+      typeof product.brandVersion !== "string") {
+    throw new Error(`invalid product brand manifest: ${productId}`);
+  }
+  for (const [name, color] of Object.entries(product.visual?.colors ?? {})) {
+    if (typeof color !== "string" || !hexColor.test(color)) {
+      throw new Error(`invalid ${productId} color ${name}: ${color}`);
+    }
+  }
+  for (const path of Object.values(product.assets ?? {})) {
+    await readFile(resolve(productRoot, path));
+  }
+  await readFile(resolve(productRoot, product.terminology));
+  await readFile(resolve(productRoot, "tokens.css"));
+}
+
 const expectedPngSizes = new Map([
   ["assets/logo/cinagroup-logo.png", [256, 256]],
   ["assets/logo/cinagroup-logo-rounded-3px.png", [256, 256]],
@@ -70,5 +95,6 @@ for (const path of ["assets/icons/web/favicon.ico", "assets/icons/windows/cinagr
   }
 }
 
-console.log(`Validated ${checksumRows.length} CinaGroup brand assets.`);
-
+console.log(
+  `Validated ${checksumRows.length} CinaGroup brand assets and ${Object.keys(brand.products ?? {}).length} product manifest.`,
+);

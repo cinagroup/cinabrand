@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "assetVersion": "1.0.1",
+  "assetVersion": "1.1.0",
   "brand": {
     "name": "CinaGroup",
     "productPrefix": "Cina",
@@ -30,8 +30,11 @@
     "windowsIcon": "assets/icons/windows/cinagroup.ico",
     "appIcon1024": "assets/icons/app/cinagroup-app-icon-1024.png"
   },
+  "products": {
+    "cinaseek": "products/cinaseek/brand.json"
+  },
   "cdn": {
-    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.0.1/",
+    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.1.0/",
     "jsdelivrMain": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@main/",
     "rawMain": "https://raw.githubusercontent.com/cinagroup/cinabrand/main/"
   }

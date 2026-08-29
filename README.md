@@ -2,6 +2,8 @@
 
 CinaGroup 官方通用品牌资产仓库。所有 CinaGroup 项目应从这里获取 Logo、favicon、应用图标和基础品牌信息，避免在各仓库中维护不一致的副本。
 
+除集团通用资产外，`products/` 还保存各产品的定位、颜色 Token、术语映射和发行元数据。产品仓库应固定到明确的品牌版本，在构建时复制所需资源，并在 CI 中校验；生产运行时不依赖本仓库或外部 CDN。
+
 ## 权威资产
 
 | 用途 | 文件 | 说明 |
@@ -41,6 +43,9 @@ CinaGroup 官方通用品牌资产仓库。所有 CinaGroup 项目应从这里�
 - [`BRAND_POLICY.md`](BRAND_POLICY.md)：品牌资产使用政策。
 - [`brand.json`](brand.json)：颜色、尺寸和资产路径的机器可读清单。
 - [`checksums.sha256`](checksums.sha256)：权威资产校验值。
+- [`products/cinaseek/brand.json`](products/cinaseek/brand.json)：CinaSeek 产品品牌契约。
+- [`products/cinaseek/terminology.json`](products/cinaseek/terminology.json)：CinaSeek 对外术语与内部兼容名称映射。
+- [`products/cinaseek/tokens.css`](products/cinaseek/tokens.css)：CinaSeek Web 品牌 Token。
 
 提交资产变更前运行：
 
