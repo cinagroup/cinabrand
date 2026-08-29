@@ -20,16 +20,16 @@ CinaGroup 官方通用品牌资产仓库。所有 CinaGroup 项目应从这里�
 
 ## 直接引用
 
-生产项目建议固定到发布标签；开发阶段可以引用 `main`：
+生产项目建议固定到发布标签；以下示例使用首个稳定资产版本 `v1.0.0`：
 
 ```html
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@main/assets/icons/web/favicon.ico">
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@main/assets/icons/web/apple-touch-icon.png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@v1.0.0/assets/icons/web/favicon.ico">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@v1.0.0/assets/icons/web/apple-touch-icon.png">
 ```
 
 ```css
 .cinagroup-logo {
-  background-image: url("https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@main/assets/logo/cinagroup-logo.png");
+  background-image: url("https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@v1.0.0/assets/logo/cinagroup-logo.png");
 }
 ```
 
@@ -47,4 +47,3 @@ CinaGroup 官方通用品牌资产仓库。所有 CinaGroup 项目应从这里�
 ```bash
 node scripts/validate.mjs
 ```
-

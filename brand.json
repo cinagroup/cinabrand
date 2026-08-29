@@ -1,5 +1,6 @@
 {
   "schemaVersion": 1,
+  "assetVersion": "1.0.0",
   "brand": {
     "name": "CinaGroup",
     "productPrefix": "Cina",
@@ -30,8 +31,8 @@
     "appIcon1024": "assets/icons/app/cinagroup-app-icon-1024.png"
   },
   "cdn": {
+    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@v1.0.0/",
     "jsdelivrMain": "https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@main/",
     "rawMain": "https://raw.githubusercontent.com/cinagroup/cinagroup-brand/main/"
   }
 }
-
