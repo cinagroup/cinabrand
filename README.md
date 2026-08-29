@@ -20,16 +20,16 @@ CinaGroup 官方通用品牌资产仓库。所有 CinaGroup 项目应从这里�
 
 ## 直接引用
 
-生产项目建议固定到发布标签；以下示例使用首个稳定资产版本 `v1.0.0`：
+生产项目建议固定到发布标签；以下示例使用仓库更名后的稳定资产版本 `v1.0.1`：
 
 ```html
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@v1.0.0/assets/icons/web/favicon.ico">
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@v1.0.0/assets/icons/web/apple-touch-icon.png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.0.1/assets/icons/web/favicon.ico">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.0.1/assets/icons/web/apple-touch-icon.png">
 ```
 
 ```css
 .cinagroup-logo {
-  background-image: url("https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@v1.0.0/assets/logo/cinagroup-logo.png");
+  background-image: url("https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.0.1/assets/logo/cinagroup-logo.png");
 }
 ```
 
