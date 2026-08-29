@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "brand": {
+    "name": "CinaGroup",
+    "productPrefix": "Cina",
+    "githubOrganization": "cinagroup"
+  },
+  "visual": {
+    "cornerRadiusPx": 3,
+    "colors": {
+      "cyanTopLeft": "#5DBFE3",
+      "cyanBottomLeft": "#02A4DC",
+      "cyanBottomRight": "#44BBE3",
+      "ink": "#000000",
+      "cloud": "#FBFBFA"
+    }
+  },
+  "assets": {
+    "logo": "assets/logo/cinagroup-logo.png",
+    "logoRounded3px": "assets/logo/cinagroup-logo-rounded-3px.png",
+    "markBlack": "assets/logo/cinagroup-mark-black.png",
+    "markWhite": "assets/logo/cinagroup-mark-white.png",
+    "favicon": "assets/icons/web/favicon.ico",
+    "favicon16": "assets/icons/web/favicon-16.png",
+    "favicon32": "assets/icons/web/favicon-32.png",
+    "appleTouchIcon": "assets/icons/web/apple-touch-icon.png",
+    "pwa192": "assets/icons/web/pwa-192.png",
+    "pwa512": "assets/icons/web/pwa-512.png",
+    "windowsIcon": "assets/icons/windows/cinagroup.ico",
+    "appIcon1024": "assets/icons/app/cinagroup-app-icon-1024.png"
+  },
+  "cdn": {
+    "jsdelivrMain": "https://cdn.jsdelivr.net/gh/cinagroup/cinagroup-brand@main/",
+    "rawMain": "https://raw.githubusercontent.com/cinagroup/cinagroup-brand/main/"
+  }
+}
+
