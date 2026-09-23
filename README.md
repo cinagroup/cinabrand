@@ -1,54 +1,56 @@
-# CinaGroup Brand
+# 海内集团 CinaGroup Brand
 
-CinaGroup 官方通用品牌资产仓库。所有 CinaGroup 项目应从这里获取 Logo、favicon、应用图标和基础品牌信息，避免在各仓库中维护不一致的副本。
+海内集团官方通用品牌资产仓库。当前集团标准为 **v2.0.0 传承字标**：保留原始左侧图案、蓝色渐变及中英文字形，提供完整组合标志、头像与平台图标。
 
-除集团通用资产外，`products/` 还保存各产品的定位、颜色 Token、术语映射和发行元数据。产品仓库应固定到明确的品牌版本，在构建时复制所需资源，并在 CI 中校验；生产运行时不依赖本仓库或外部 CDN。
+![海内集团传承字标套件](assets/heritage/preview.png)
 
-## 权威资产
+## 传承字标套件
 
-| 用途 | 文件 | 说明 |
-| --- | --- | --- |
-| 主 Logo | [`assets/logo/cinagroup-logo.png`](assets/logo/cinagroup-logo.png) | 256×256，原始全彩版本 |
-| 3px 圆角 Logo | [`assets/logo/cinagroup-logo-rounded-3px.png`](assets/logo/cinagroup-logo-rounded-3px.png) | 256×256，透明圆角 |
-| 黑色标志 | [`assets/logo/cinagroup-mark-black.png`](assets/logo/cinagroup-mark-black.png) | 透明背景，用于浅色界面 |
-| 白色标志 | [`assets/logo/cinagroup-mark-white.png`](assets/logo/cinagroup-mark-white.png) | 透明背景，用于深色界面 |
-| Web favicon | [`assets/icons/web/favicon.ico`](assets/icons/web/favicon.ico) | 16–256px 多分辨率 ICO |
-| PWA 图标 | [`assets/icons/web/pwa-192.png`](assets/icons/web/pwa-192.png)、[`pwa-512.png`](assets/icons/web/pwa-512.png) | Web App Manifest |
-| Apple Touch Icon | [`assets/icons/web/apple-touch-icon.png`](assets/icons/web/apple-touch-icon.png) | 180×180，不预裁圆角 |
-| Windows 图标 | [`assets/icons/windows/cinagroup.ico`](assets/icons/windows/cinagroup.ico) | 16、20、24、32、40、48、64、128、256px |
-| 应用商店图标 | [`assets/icons/app/cinagroup-app-icon-1024.png`](assets/icons/app/cinagroup-app-icon-1024.png) | 1024×1024，不预裁系统圆角 |
+| 用途 | PNG | SVG | 原生尺寸 |
+| --- | --- | --- | --- |
+| 横版中英组合 | [下载](assets/heritage/cinagroup-horizontal.png) | [下载](assets/heritage/cinagroup-horizontal.svg) | 3328 × 1152 |
+| 竖版中英组合 | [下载](assets/heritage/cinagroup-stacked.png) | [下载](assets/heritage/cinagroup-stacked.svg) | 1408 × 1664 |
+| 英文组合 | [下载](assets/heritage/cinagroup-english.png) | [下载](assets/heritage/cinagroup-english.svg) | 3072 × 1152 |
+| 纯字标组合 | [下载](assets/heritage/cinagroup-wordmark.png) | [下载](assets/heritage/cinagroup-wordmark.svg) | 2176 × 960 |
 
-![CinaGroup Logo](assets/logo/cinagroup-logo.png)
+每种组合还提供 `-white` 文字反白版本，以及四分之一宽度的 PNG，例如 [`cinagroup-horizontal-832.png`](assets/heritage/cinagroup-horizontal-832.png)。全部组合保留左侧全彩原图；反白版本仅改变文字颜色。SVG 自包含原稿位图，**不是纯矢量描摹稿**。
 
-## 直接引用
+独立素材：[左侧原图](assets/heritage/cinagroup-symbol-source.png)、[中文原字标](assets/heritage/cinagroup-wordmark-zh.png)、[英文原字标](assets/heritage/cinagroup-wordmark-en.png)。完整文件、尺寸与校验值见 [套件清单](assets/heritage/manifest.json)。
 
-生产项目建议固定到发布标签；以下示例使用仓库更名后的稳定资产版本 `v1.0.1`：
+## 独立图标
+
+- **3px 圆角图标**：[`assets/icons/rounded/`](assets/icons/rounded/)，包含 16、24、32、48、64、96、128、180、192、256、512、1024px。每个尺寸独立生成 3px 圆角。
+- **Web favicon**：[`favicon.ico`](assets/icons/web/favicon.ico)，内含 16、20、24、32、40、48、64、128、256px；另有 [16px PNG](assets/icons/web/favicon-16.png) / [32px PNG](assets/icons/web/favicon-32.png)。
+- **Windows**：[`cinagroup.ico`](assets/icons/windows/cinagroup.ico)，九种尺寸。
+- **Apple Touch Icon**：[180px](assets/icons/web/apple-touch-icon.png)，完整方形，交由系统裁切。
+- **PWA**：[192px](assets/icons/web/pwa-192.png) / [512px](assets/icons/web/pwa-512.png)，普通方形图标，不作为专用 maskable 安全区图标。
+- **应用原图**：[1024px](assets/icons/app/cinagroup-app-icon-1024.png)，完整方形。
+- 原有 [256px 方形路径](assets/logo/cinagroup-logo.png) / [256px 圆角路径](assets/logo/cinagroup-logo-rounded-3px.png)继续可用，并更新到本次原稿。
+
+## 固定版本引用
 
 ```html
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.0.1/assets/icons/web/favicon.ico">
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.0.1/assets/icons/web/apple-touch-icon.png">
+<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.0/assets/heritage/cinagroup-horizontal-832.png"
+     width="832" height="288" alt="海内集团 CINAGROUP">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.0/assets/icons/web/favicon.ico">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.0/assets/icons/web/apple-touch-icon.png">
 ```
 
-```css
-.cinagroup-logo {
-  background-image: url("https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.0.1/assets/logo/cinagroup-logo.png");
-}
-```
+固定尺寸 PNG 的 3px 圆角在整体缩放时也会缩放。网页需固定 3 CSS px 时使用完整方形原图配合容器圆角，详见规范。生产项目建议固定版本并在构建时复制资源；离线应用不在运行时依赖 CDN。
 
-需要离线打包、桌面安装器或移动应用图标时，应将对应文件同步进项目并在构建配置中引用，不要在运行时依赖外部 CDN。
+## 规范与复现
 
-## 规范与机器可读信息
-
-- [`BRAND_GUIDELINES.md`](BRAND_GUIDELINES.md)：视觉与命名使用规范。
-- [`BRAND_POLICY.md`](BRAND_POLICY.md)：品牌资产使用政策。
-- [`brand.json`](brand.json)：颜色、尺寸和资产路径的机器可读清单。
-- [`checksums.sha256`](checksums.sha256)：权威资产校验值。
-- [`products/cinaseek/brand.json`](products/cinaseek/brand.json)：CinaSeek 产品品牌契约。
-- [`products/cinaseek/terminology.json`](products/cinaseek/terminology.json)：CinaSeek 对外术语与内部兼容名称映射。
-- [`products/cinaseek/tokens.css`](products/cinaseek/tokens.css)：CinaSeek Web 品牌 Token。
-
-提交资产变更前运行：
+- [品牌使用规范](BRAND_GUIDELINES.md)：组合、名称、圆角、留白与兼容说明。
+- [品牌资产政策](BRAND_POLICY.md)：使用授权。
+- [机器可读清单](brand.json) / [SHA-256 清单](checksums.sha256)。
+- [核准原稿](sources/heritage/cinagroup_20251026.png)：从用户提供的无损 PNG 保留。
+- [生成脚本](scripts/build-heritage.mjs)：从核准原稿生成资产。
+- [CinaSeek 产品契约](products/cinaseek/brand.json)、[术语映射](products/cinaseek/terminology.json)、[界面 Token](products/cinaseek/tokens.css)。
 
 ```bash
-node scripts/validate.mjs
+pnpm install --frozen-lockfile
+pnpm build
+pnpm test
 ```
+
+v1.x 标签保留此前发布的图标。历史单色文件继续保留供兼容使用，不属于本次全彩传承套件的新核准稿。

@@ -1,8 +1,10 @@
 {
   "schemaVersion": 1,
-  "assetVersion": "1.1.0",
+  "assetVersion": "2.0.0",
   "brand": {
     "name": "CinaGroup",
+    "chineseName": "海内集团",
+    "wordmark": "CINAGROUP",
     "productPrefix": "Cina",
     "githubOrganization": "cinagroup"
   },
@@ -13,7 +15,8 @@
       "cyanBottomLeft": "#02A4DC",
       "cyanBottomRight": "#44BBE3",
       "ink": "#000000",
-      "cloud": "#FBFBFA"
+      "cloud": "#FBFBFA",
+      "deepSea": "#123B56"
     }
   },
   "assets": {
@@ -28,13 +31,22 @@
     "pwa192": "assets/icons/web/pwa-192.png",
     "pwa512": "assets/icons/web/pwa-512.png",
     "windowsIcon": "assets/icons/windows/cinagroup.ico",
-    "appIcon1024": "assets/icons/app/cinagroup-app-icon-1024.png"
+    "appIcon1024": "assets/icons/app/cinagroup-app-icon-1024.png",
+    "heritageHorizontal": "assets/heritage/cinagroup-horizontal.png",
+    "heritageHorizontalSvg": "assets/heritage/cinagroup-horizontal.svg",
+    "heritageHorizontalWhite": "assets/heritage/cinagroup-horizontal-white.png",
+    "heritageStacked": "assets/heritage/cinagroup-stacked.png",
+    "heritageEnglish": "assets/heritage/cinagroup-english.png",
+    "heritageWordmark": "assets/heritage/cinagroup-wordmark.png",
+    "heritagePreview": "assets/heritage/preview.png"
   },
+  "heritageManifest": "assets/heritage/manifest.json",
+  "legacyMonochromeAssets": ["assets/logo/cinagroup-mark-black.png", "assets/logo/cinagroup-mark-white.png"],
   "products": {
     "cinaseek": "products/cinaseek/brand.json"
   },
   "cdn": {
-    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v1.1.0/",
+    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.0/",
     "jsdelivrMain": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@main/",
     "rawMain": "https://raw.githubusercontent.com/cinagroup/cinabrand/main/"
   }
