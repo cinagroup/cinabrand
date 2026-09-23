@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "name": "海内集团 · 传承字标",
   "englishWordmark": "CINAGROUP",
   "source": {
@@ -31,7 +31,11 @@
     "shape": "unchanged-source-raster",
     "lettering": "extracted-original-glyphs",
     "bilingualAlignment": "equal-width-left-and-right",
-    "cornerRadiusPx": 3,
+    "cornerRadiusRatio": 0.046875,
+    "cornerRadiusReference": {
+      "sizePx": 256,
+      "radiusPx": 12
+    },
     "svg": "self-contained SVG with embedded PNG artwork; not traced vector paths",
     "platformIcons": "square artwork; OS applies its own mask"
   },
@@ -62,153 +66,261 @@
     },
     {
       "path": "assets/heritage/cinagroup-horizontal.svg",
-      "sha256": "7cb11e71aaeb28697bb3c81328423516414ed8fc29982e4563ae839fd436276f",
+      "sha256": "5edea387b87719a555750fd21b7509890894bf1fa4dece3b6254b3bb1ae156fb",
       "format": "svg",
       "width": 3328,
       "height": 1152,
       "embeddedRaster": true,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
     },
     {
       "path": "assets/heritage/cinagroup-horizontal.png",
-      "sha256": "ca41693d5db623c972bac6e6d3e7b6d365bb38c81081945e91abb6bec2e8bc92",
+      "sha256": "8f8843b1670da11328059f6afee02e31b0e0b770916c27d9dfcc9d744a8702fe",
       "format": "png",
       "width": 3328,
       "height": 1152,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
     },
     {
       "path": "assets/heritage/cinagroup-horizontal-832.png",
-      "sha256": "6ecf0222c794a6c0e6d40380fa40c726352fad09843746ffd52d7e2de75cbf70",
+      "sha256": "67a85e4e292561a825341559203834f30d744b06ee98350dc2606019d1cbe966",
       "format": "png",
       "width": 832,
       "height": 288,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      }
     },
     {
       "path": "assets/heritage/cinagroup-horizontal-white.svg",
-      "sha256": "185dbdbdefc13ea2dfda6e10a16f912fe21b9ef5fb0c7f4e1a4905bbc8b001fa",
+      "sha256": "84ccc958ceffcf733351aca3b565e758b5a122f56d895adb97d15aaf278b9788",
       "format": "svg",
       "width": 3328,
       "height": 1152,
       "embeddedRaster": true,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
     },
     {
       "path": "assets/heritage/cinagroup-horizontal-white.png",
-      "sha256": "002c12f737fcf9b1f922af68bd0c34486b7d0cae1480c21604e1b8be26f98fea",
+      "sha256": "f0f5660e8a6961164a0cf63f69dd01a7f839cc533a3afe36aa4ef44251f9b000",
       "format": "png",
       "width": 3328,
       "height": 1152,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
     },
     {
       "path": "assets/heritage/cinagroup-horizontal-white-832.png",
-      "sha256": "ad6744690b57bc52763f3b8fe9bdb6912f5e610bd04ed62001adf4c5e305c6a9",
+      "sha256": "2bc60d13e126c46ba56dea5e2ddc011a105034f2cb48e494fb2db4ac9d2045ea",
       "format": "png",
       "width": 832,
       "height": 288,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      }
     },
     {
       "path": "assets/heritage/cinagroup-stacked.svg",
-      "sha256": "181625a99cf1ecf2a31db8c804842af3adc9e2c3f45105a41cc9c48b7a890f74",
+      "sha256": "e2fdf1751f9ddc04701d889e63ed6e3b313e60265449acc1f9b08825ad299027",
       "format": "svg",
       "width": 1408,
       "height": 1664,
       "embeddedRaster": true,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      }
     },
     {
       "path": "assets/heritage/cinagroup-stacked.png",
-      "sha256": "c6b5272e1050aea3f50eb3675e2807c556cd700b19a9cb364b82e7cb4644e5a1",
+      "sha256": "1527d0cb6c6c74e1d97e0bef860428347adb5c5c15a3aa25f159006b0cdaf746",
       "format": "png",
       "width": 1408,
       "height": 1664,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      }
     },
     {
       "path": "assets/heritage/cinagroup-stacked-352.png",
-      "sha256": "6f0cfb80545222449f660431425152906d8a0d093ef179c483437b9470f32e07",
+      "sha256": "edbd9613b03bebd626ee496cf16861fa642e1d462c6ca9b39b6841e5983f4935",
       "format": "png",
       "width": 352,
       "height": 416,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      }
     },
     {
       "path": "assets/heritage/cinagroup-stacked-white.svg",
-      "sha256": "20dc39069bc8b58c44c92e03dd72a9b6e172d12516ee467dfba55ffef6c4f2fe",
+      "sha256": "aa6855891443052ece5e6fc28eec4b8cffe6f4ff859843f758b33fa85b5ee8d7",
       "format": "svg",
       "width": 1408,
       "height": 1664,
       "embeddedRaster": true,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      }
     },
     {
       "path": "assets/heritage/cinagroup-stacked-white.png",
-      "sha256": "40cefcc7ad4b9c18161328360667ea7681b81e5f600fbd79fc164cf0882d4876",
+      "sha256": "f023f02b24b37df77c776fe779dcbb602c08f1d47087891e200debb694480958",
       "format": "png",
       "width": 1408,
       "height": 1664,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      }
     },
     {
       "path": "assets/heritage/cinagroup-stacked-white-352.png",
-      "sha256": "0e460f6e9d049bddc6c1f8aed6b8b161d25064bcaa1f332a08dbd39db6e60d1f",
+      "sha256": "e5a79cee6d0ff8aec4d054eb642aec17e1a2eb3dbb39f9852c31c8653e10c836",
       "format": "png",
       "width": 352,
       "height": 416,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      }
     },
     {
       "path": "assets/heritage/cinagroup-english.svg",
-      "sha256": "fb2cbbd444fea2aa6cac905e8d26d4b1d9ea005ff720ef5682bd71ba49ea4f87",
+      "sha256": "c9a9901cf8801a9b599373b4bda31d301eeaa1fd17d9023b37b7059871595ef5",
       "format": "svg",
       "width": 3072,
       "height": 1152,
       "embeddedRaster": true,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
     },
     {
       "path": "assets/heritage/cinagroup-english.png",
-      "sha256": "cfe7112f4822b2e8b7869119669ce1ce9b13e4791a370a4ba668ede85101323e",
+      "sha256": "6994cbaf3e9ce3be0b60213ceb7242bd9af808b8abfa71e24a933218b6e3da5e",
       "format": "png",
       "width": 3072,
       "height": 1152,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
     },
     {
       "path": "assets/heritage/cinagroup-english-768.png",
-      "sha256": "5a002b946824f264da27dcb64ef5c0a09e4a4d7030dc3a11714fb7750c37fb63",
+      "sha256": "a1cd7fbe9d87608b26ff41abd91704baa8e4da4ca0d537c872e4c0503e9947e2",
       "format": "png",
       "width": 768,
       "height": 288,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      }
     },
     {
       "path": "assets/heritage/cinagroup-english-white.svg",
-      "sha256": "26aa76b9a215e537de856e452b69ccda199c6dc9808de35936746c33f4147e91",
+      "sha256": "02323b02e6594dde96ae9980ac92156a87937aecc66bebb15856f13063b1c660",
       "format": "svg",
       "width": 3072,
       "height": 1152,
       "embeddedRaster": true,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
     },
     {
       "path": "assets/heritage/cinagroup-english-white.png",
-      "sha256": "5c40e572f940e01085fb2313156f735aa5b1aa7d1e43db3cea8089214533df35",
+      "sha256": "1b7eedf16d2f6d3c2a75149e4d4a6d42bf06e62fa6c012d12abd5a15adb5b69e",
       "format": "png",
       "width": 3072,
       "height": 1152,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
     },
     {
       "path": "assets/heritage/cinagroup-english-white-768.png",
-      "sha256": "23f935130de44027623dffcb0c3a83b6a96f8c6a548156af6c0064bdcb10875a",
+      "sha256": "994944740aef1908ae6e5cf7f9edefcd0bb05e3a2940d20384067c0065e90dba",
       "format": "png",
       "width": 768,
       "height": 288,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      }
     },
     {
       "path": "assets/heritage/cinagroup-wordmark.svg",
@@ -262,35 +374,39 @@
     },
     {
       "path": "assets/icons/rounded/cinagroup-16.png",
-      "sha256": "e6dabf28c02279814ce28296fd1bd75d488e4d2ef397e4d8be7dab751e97e12a",
+      "sha256": "466edea4352302f98c6b465ff3079c10d89bfedd2808e0133ef5e69ee2723865",
       "format": "png",
       "width": 16,
       "height": 16,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 0.75
     },
     {
       "path": "assets/icons/rounded/cinagroup-24.png",
-      "sha256": "5531403a544437627db37f8beae508032ee184350ba654d7580780bbc7961154",
+      "sha256": "32a248a26f62e0229ceddd67c3465c0c972d2d4a622bce2ed0d4797385d015e6",
       "format": "png",
       "width": 24,
       "height": 24,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 1.125
     },
     {
       "path": "assets/icons/rounded/cinagroup-32.png",
-      "sha256": "386c8e6be4d04c0709c77542e79489814d260061da930dc49ee6044d0b6c4f36",
+      "sha256": "6e0dc0d6b34e5c94bd35237fd5ba7927065dc6bbcaea67a67763e07883de71dd",
       "format": "png",
       "width": 32,
       "height": 32,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 1.5
     },
     {
       "path": "assets/icons/rounded/cinagroup-48.png",
-      "sha256": "02324571ab801ecc90158ab7511349c2f9416bd48c8e2173f10414788b494ecb",
+      "sha256": "be12abc80074e0caf5ce74200eb4fa837e1679ab9865290816203b8f4ef34936",
       "format": "png",
       "width": 48,
       "height": 48,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 2.25
     },
     {
       "path": "assets/icons/rounded/cinagroup-64.png",
@@ -298,63 +414,71 @@
       "format": "png",
       "width": 64,
       "height": 64,
+      "cornerRadiusRatio": 0.046875,
       "cornerRadiusPx": 3
     },
     {
       "path": "assets/icons/rounded/cinagroup-96.png",
-      "sha256": "b254bd060dbae82881ad3ed94155a2640f8c57127189f01c4ede22c17b2825fc",
+      "sha256": "05ba660b6b59490987a17cbfac8f65e04c3a77dd460b01038c26bc9641de0830",
       "format": "png",
       "width": 96,
       "height": 96,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 4.5
     },
     {
       "path": "assets/icons/rounded/cinagroup-128.png",
-      "sha256": "8c82ade1b78db7e44c5f4dc50c4039cdffd9b767df85c0e64ac5533a3cdd4d08",
+      "sha256": "753bd26aaf1968a694bc7d114004fc894e1e724d2557af6bfc3729a0f3bd3dfa",
       "format": "png",
       "width": 128,
       "height": 128,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 6
     },
     {
       "path": "assets/icons/rounded/cinagroup-180.png",
-      "sha256": "98a1854141760205b9b9aeb7e6384d215dcea6fd64b091ec5a577058bd593fc6",
+      "sha256": "b1f12ae6edde8c82927ea6c74e7e4587cb0fc5b3bdb346b3a830426581dd16a2",
       "format": "png",
       "width": 180,
       "height": 180,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 8.4375
     },
     {
       "path": "assets/icons/rounded/cinagroup-192.png",
-      "sha256": "e3622996ce36f7c0c555b723532dfd62cf29dd3702de7137c12e4babe747acef",
+      "sha256": "ba723e4197ba98274bc8bcc673097752cd2dc1e4727572c7f7eb54116c094552",
       "format": "png",
       "width": 192,
       "height": 192,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 9
     },
     {
       "path": "assets/icons/rounded/cinagroup-256.png",
-      "sha256": "69f8d93ebf1d7a34812a29603a6ac71ef456724c78f0fbe5a061fc98256a7ced",
+      "sha256": "31da4b7fb36b640bc9576c2c6458dabb7410049e0b7030107818d00638bba755",
       "format": "png",
       "width": 256,
       "height": 256,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12
     },
     {
       "path": "assets/icons/rounded/cinagroup-512.png",
-      "sha256": "82ac7b45ac8512206ed98e5b06145f4b0e2143743026163c0c0e07dd21ed0925",
+      "sha256": "76e5551d7781b0e2fe7b1923df81b5039d60aa13165965c1d0f8e8fc4dbdd7cd",
       "format": "png",
       "width": 512,
       "height": 512,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 24
     },
     {
       "path": "assets/icons/rounded/cinagroup-1024.png",
-      "sha256": "c6dacc2b38ef4d470e2190f2ddfc82d57ab0b26eb21b56a40e55c341f64d2852",
+      "sha256": "b29ef751d165304bbebe93f2b09dfe71c15763e86c3c5f9ad7623c38ab8c7fed",
       "format": "png",
       "width": 1024,
       "height": 1024,
-      "cornerRadiusPx": 3
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
     },
     {
       "path": "assets/logo/cinagroup-logo.png",
@@ -365,28 +489,40 @@
       "cornerRadiusPx": 0
     },
     {
+      "path": "assets/logo/cinagroup-logo-rounded.png",
+      "sha256": "31da4b7fb36b640bc9576c2c6458dabb7410049e0b7030107818d00638bba755",
+      "format": "png",
+      "width": 256,
+      "height": 256,
+      "cornerRadiusPx": 12,
+      "cornerRadiusRatio": 0.046875
+    },
+    {
       "path": "assets/logo/cinagroup-logo-rounded-3px.png",
       "sha256": "69f8d93ebf1d7a34812a29603a6ac71ef456724c78f0fbe5a061fc98256a7ced",
       "format": "png",
       "width": 256,
       "height": 256,
-      "cornerRadiusPx": 3
+      "cornerRadiusPx": 3,
+      "role": "legacy-fixed-3px"
     },
     {
       "path": "assets/icons/web/favicon-16.png",
-      "sha256": "e6dabf28c02279814ce28296fd1bd75d488e4d2ef397e4d8be7dab751e97e12a",
+      "sha256": "466edea4352302f98c6b465ff3079c10d89bfedd2808e0133ef5e69ee2723865",
       "format": "png",
       "width": 16,
       "height": 16,
-      "cornerRadiusPx": 3
+      "cornerRadiusPx": 0.75,
+      "cornerRadiusRatio": 0.046875
     },
     {
       "path": "assets/icons/web/favicon-32.png",
-      "sha256": "386c8e6be4d04c0709c77542e79489814d260061da930dc49ee6044d0b6c4f36",
+      "sha256": "6e0dc0d6b34e5c94bd35237fd5ba7927065dc6bbcaea67a67763e07883de71dd",
       "format": "png",
       "width": 32,
       "height": 32,
-      "cornerRadiusPx": 3
+      "cornerRadiusPx": 1.5,
+      "cornerRadiusRatio": 0.046875
     },
     {
       "path": "assets/icons/web/apple-touch-icon.png",
@@ -422,7 +558,7 @@
     },
     {
       "path": "assets/icons/web/favicon.ico",
-      "sha256": "7cc81b503a21613e3c762fcd3b4e8912582a8f639c4281e716ef66752035cd32",
+      "sha256": "0be8a4b94b30c12cc09ded28cd114571b2199f423c591eb078951bd2a995669d",
       "format": "ico",
       "sizes": [
         16,
@@ -434,11 +570,12 @@
         64,
         128,
         256
-      ]
+      ],
+      "cornerRadiusRatio": 0.046875
     },
     {
       "path": "assets/icons/windows/cinagroup.ico",
-      "sha256": "7cc81b503a21613e3c762fcd3b4e8912582a8f639c4281e716ef66752035cd32",
+      "sha256": "0be8a4b94b30c12cc09ded28cd114571b2199f423c591eb078951bd2a995669d",
       "format": "ico",
       "sizes": [
         16,
@@ -450,11 +587,12 @@
         64,
         128,
         256
-      ]
+      ],
+      "cornerRadiusRatio": 0.046875
     },
     {
       "path": "assets/heritage/preview.png",
-      "sha256": "43ee1d804ae9d3e536ca0d256b527f21e476aacfe48d68504c85461acb936e2f",
+      "sha256": "ae5fbd1d2e897a2b57d8e792302a976460052460b485a4b2e88ef477f54a7247",
       "format": "png",
       "width": 1600,
       "height": 1600,

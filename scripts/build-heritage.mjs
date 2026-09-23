@@ -10,6 +10,8 @@ const source = await readFile(resolve(root, sourcePath));
 const hash = data => createHash('sha256').update(data).digest('hex');
 const sourceHash = '78a54b7a5a654d20acf292a6188c4303597633b42d6899b1c7197b51fa9c2a5d';
 if (hash(source) !== sourceHash) throw new Error('The approved source artwork has changed.');
+const cornerRadiusRatio = 12 / 256;
+const radiusFor = size => size * cornerRadiusRatio;
 
 const records = [];
 async function save(path, data, extra = {}) {
@@ -77,7 +79,7 @@ function lockup(name, width, reversed = false) {
   let svg = header(width, height);
   if (layout.tile) {
     const [x, y, size] = layout.tile.map(n => n * scale);
-    svg += `<defs><clipPath id="corners"><rect x="${x}" y="${y}" width="${size}" height="${size}" rx="3" ry="3"/></clipPath></defs>`;
+    svg += `<defs><clipPath id="corners"><rect x="${x}" y="${y}" width="${size}" height="${size}" rx="${radiusFor(size)}" ry="${radiusFor(size)}"/></clipPath></defs>`;
     svg += image(mark, x, y, size, size, 'clip-path="url(#corners)"');
   }
   for (const [key, buffer, meta] of [['chinese', reversed ? whiteCn : chinese, cn], ['english', reversed ? whiteEn : english, en]]) {
@@ -87,30 +89,36 @@ function lockup(name, width, reversed = false) {
   }
   return Buffer.from(svg + '</svg>');
 }
+function cornerMetadata(layout, scale = 1) {
+  if (!layout.tile) return { cornerRadiusPx: null };
+  const [x, y, size] = layout.tile.map(value => value * scale);
+  return { cornerRadiusRatio, cornerRadiusPx: radiusFor(size), symbolFrame: { x, y, size } };
+}
 for (const [name, layout] of Object.entries(layouts)) {
   for (const reversed of [false, true]) {
     const suffix = reversed ? '-white' : '';
     const stem = `assets/heritage/cinagroup-${name}${suffix}`;
     const svg = lockup(name, layout.width, reversed);
-    await save(`${stem}.svg`, svg, { format: 'svg', width: layout.width, height: layout.height, embeddedRaster: true, cornerRadiusPx: layout.tile ? 3 : null });
-    await savePng(`${stem}.png`, await sharp(svg).png(png).toBuffer(), { cornerRadiusPx: layout.tile ? 3 : null });
+    await save(`${stem}.svg`, svg, { format: 'svg', width: layout.width, height: layout.height, embeddedRaster: true, ...cornerMetadata(layout) });
+    await savePng(`${stem}.png`, await sharp(svg).png(png).toBuffer(), cornerMetadata(layout));
     const smallWidth = layout.width / 4;
-    await savePng(`${stem}-${smallWidth}.png`, await sharp(lockup(name, smallWidth, reversed)).png(png).toBuffer(), { cornerRadiusPx: layout.tile ? 3 : null });
+    await savePng(`${stem}-${smallWidth}.png`, await sharp(lockup(name, smallWidth, reversed)).png(png).toBuffer(), cornerMetadata(layout, 0.25));
   }
 }
 
-async function icon(size, rounded) {
+async function icon(size, rounded, radius = radiusFor(size)) {
   const scaled = await sharp(mark).resize(size, size).png(png).toBuffer();
   if (!rounded) return scaled;
-  const mask = Buffer.from(`<svg width="${size}" height="${size}"><rect width="${size}" height="${size}" rx="3" ry="3" fill="white"/></svg>`);
+  const mask = Buffer.from(`<svg width="${size}" height="${size}"><rect width="${size}" height="${size}" rx="${radius}" ry="${radius}" fill="white"/></svg>`);
   return sharp(scaled).composite([{ input: mask, blend: 'dest-in' }]).png(png).toBuffer();
 }
 for (const size of [16, 24, 32, 48, 64, 96, 128, 180, 192, 256, 512, 1024]) {
-  await savePng(`assets/icons/rounded/cinagroup-${size}.png`, await icon(size, true), { cornerRadiusPx: 3 });
+  await savePng(`assets/icons/rounded/cinagroup-${size}.png`, await icon(size, true), { cornerRadiusRatio, cornerRadiusPx: radiusFor(size) });
 }
 const platformPngs = [
   ['assets/logo/cinagroup-logo.png', 256, false],
-  ['assets/logo/cinagroup-logo-rounded-3px.png', 256, true],
+  ['assets/logo/cinagroup-logo-rounded.png', 256, true],
+  ['assets/logo/cinagroup-logo-rounded-3px.png', 256, true, 3],
   ['assets/icons/web/favicon-16.png', 16, true],
   ['assets/icons/web/favicon-32.png', 32, true],
   ['assets/icons/web/apple-touch-icon.png', 180, false],
@@ -118,7 +126,14 @@ const platformPngs = [
   ['assets/icons/web/pwa-512.png', 512, false],
   ['assets/icons/app/cinagroup-app-icon-1024.png', 1024, false],
 ];
-for (const [path, size, rounded] of platformPngs) await savePng(path, await icon(size, rounded), { cornerRadiusPx: rounded ? 3 : 0 });
+for (const [path, size, rounded, fixedRadius] of platformPngs) {
+  const radius = fixedRadius ?? radiusFor(size);
+  await savePng(path, await icon(size, rounded, radius), {
+    cornerRadiusPx: rounded ? radius : 0,
+    ...(rounded && fixedRadius === undefined ? { cornerRadiusRatio } : {}),
+    ...(fixedRadius !== undefined ? { role: 'legacy-fixed-3px' } : {}),
+  });
+}
 const icoSizes = [16, 20, 24, 32, 40, 48, 64, 128, 256];
 const icoImages = await Promise.all(icoSizes.map(size => icon(size, true)));
 const directory = Buffer.alloc(6 + icoSizes.length * 16);
@@ -135,7 +150,7 @@ icoSizes.forEach((size, i) => {
   imageOffset += icoImages[i].length;
 });
 const ico = Buffer.concat([directory, ...icoImages]);
-for (const path of ['assets/icons/web/favicon.ico', 'assets/icons/windows/cinagroup.ico']) await save(path, ico, { format: 'ico', sizes: icoSizes });
+for (const path of ['assets/icons/web/favicon.ico', 'assets/icons/windows/cinagroup.ico']) await save(path, ico, { format: 'ico', sizes: icoSizes, cornerRadiusRatio });
 
 // Contact sheet is only a preview; deliverable artwork never depends on fonts.
 let sheet = header(1600, 1600) + '<rect width="1600" height="1600" fill="white"/>';
@@ -144,7 +159,7 @@ sheet += label('海内集团 · 传承字标套件', 48, 76, 38, '#101b22');
 sheet += label('CINAGROUP', 1292, 74, 24);
 for (const y of [150, 610, 1070, 1530]) sheet += `<path d="M32 ${y}H1568" stroke="#e2e8ec"/>`;
 sheet += '<path d="M800 150V1530" stroke="#e2e8ec"/>';
-const titles = ['01  横版中英组合', '02  纯字标组合', '03  竖版中英组合', '04  英文组合', '05  深色应用', '06  独立图标 · 3px 圆角'];
+const titles = ['01  横版中英组合', '02  纯字标组合', '03  竖版中英组合', '04  英文组合', '05  深色应用', '06  独立图标 · 等比例圆角'];
 for (let i = 0; i < titles.length; i++) sheet += label(titles[i], 48 + (i % 2) * 800, 205 + Math.floor(i / 2) * 460);
 const sample = async (name, x, y, width, reversed = false) => {
   const data = await sharp(lockup(name, width, reversed)).png(png).toBuffer();
@@ -161,14 +176,14 @@ for (const [size, x] of [[192, 866], [128, 1134], [64, 1342], [32, 1462]]) {
   sheet += image(await icon(size, true), x, 1400 - size, size, size);
   sheet += label(`${size}px`, x, 1440, 20);
 }
-sheet += label('原图图形与字形保留 · 标准字标 CINAGROUP', 48, 1575, 20);
+sheet += label('原图图形与字形保留 · 圆角比例 4.6875%（256px 对应 12px）', 48, 1575, 20);
 sheet += '</svg>';
 await savePng('assets/heritage/preview.png', await sharp(Buffer.from(sheet)).png(png).toBuffer(), { role: 'preview' });
 
 const manifest = {
-  schemaVersion: 1, version: '2.0.1', name: '海内集团 · 传承字标', englishWordmark: 'CINAGROUP',
+  schemaVersion: 1, version: '2.0.2', name: '海内集团 · 传承字标', englishWordmark: 'CINAGROUP',
   source: { path: sourcePath, sha256: sourceHash, width: 3238, height: 1024, symbolRect: { left: 0, top: 0, width: 1024, height: 1024 }, chineseRect, englishRect },
-  rules: { shape: 'unchanged-source-raster', lettering: 'extracted-original-glyphs', bilingualAlignment: 'equal-width-left-and-right', cornerRadiusPx: 3, svg: 'self-contained SVG with embedded PNG artwork; not traced vector paths', platformIcons: 'square artwork; OS applies its own mask' },
+  rules: { shape: 'unchanged-source-raster', lettering: 'extracted-original-glyphs', bilingualAlignment: 'equal-width-left-and-right', cornerRadiusRatio, cornerRadiusReference: { sizePx: 256, radiusPx: 12 }, svg: 'self-contained SVG with embedded PNG artwork; not traced vector paths', platformIcons: 'square artwork; OS applies its own mask' },
   assets: records,
 };
 await writeFile(resolve(root, 'assets/heritage/manifest.json'), JSON.stringify(manifest, null, 2) + '\n');

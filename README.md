@@ -1,6 +1,6 @@
 # 海内集团 CinaGroup Brand
 
-海内集团官方通用品牌资产仓库。当前集团标准为 **v2.0.1 传承字标**：保留原始左侧图案、蓝色渐变及中英文字形，中英双行组合等宽、左右对齐，提供完整组合标志、头像与平台图标。
+海内集团官方通用品牌资产仓库。当前集团标准为 **v2.0.2 传承字标**：保留原始左侧图案、蓝色渐变及中英文字形，中英双行组合等宽、左右对齐，蓝色底板采用边长 **4.6875%** 的等比例圆角。
 
 ![海内集团传承字标套件](assets/heritage/preview.png)
 
@@ -19,24 +19,24 @@
 
 ## 独立图标
 
-- **3px 圆角图标**：[`assets/icons/rounded/`](assets/icons/rounded/)，包含 16、24、32、48、64、96、128、180、192、256、512、1024px。每个尺寸独立生成 3px 圆角。
+- **等比例圆角图标**：[`assets/icons/rounded/`](assets/icons/rounded/)，包含 16、24、32、48、64、96、128、180、192、256、512、1024px。圆角半径为边长的 4.6875%，例如 256px 对应 12px、512px 对应 24px、1024px 对应 48px。
 - **Web favicon**：[`favicon.ico`](assets/icons/web/favicon.ico)，内含 16、20、24、32、40、48、64、128、256px；另有 [16px PNG](assets/icons/web/favicon-16.png) / [32px PNG](assets/icons/web/favicon-32.png)。
 - **Windows**：[`cinagroup.ico`](assets/icons/windows/cinagroup.ico)，九种尺寸。
 - **Apple Touch Icon**：[180px](assets/icons/web/apple-touch-icon.png)，完整方形，交由系统裁切。
 - **PWA**：[192px](assets/icons/web/pwa-192.png) / [512px](assets/icons/web/pwa-512.png)，普通方形图标，不作为专用 maskable 安全区图标。
 - **应用原图**：[1024px](assets/icons/app/cinagroup-app-icon-1024.png)，完整方形。
-- 原有 [256px 方形路径](assets/logo/cinagroup-logo.png) / [256px 圆角路径](assets/logo/cinagroup-logo-rounded-3px.png)继续可用，并更新到本次原稿。
+- 256px 文件：[完整方形](assets/logo/cinagroup-logo.png) / [标准圆角](assets/logo/cinagroup-logo-rounded.png)。[固定 3px 文件](assets/logo/cinagroup-logo-rounded-3px.png)仅作为历史兼容版本。
 
 ## 固定版本引用
 
 ```html
-<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.1/assets/heritage/cinagroup-horizontal-832.png"
+<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.2/assets/heritage/cinagroup-horizontal-832.png"
      width="832" height="288" alt="海内集团 CINAGROUP">
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.1/assets/icons/web/favicon.ico">
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.1/assets/icons/web/apple-touch-icon.png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.2/assets/icons/web/favicon.ico">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.2/assets/icons/web/apple-touch-icon.png">
 ```
 
-固定尺寸 PNG 的 3px 圆角在整体缩放时也会缩放。网页需固定 3 CSS px 时使用完整方形原图配合容器圆角，详见规范。生产项目建议固定版本并在构建时复制资源；离线应用不在运行时依赖 CDN。
+圆角随图形整体缩放，保持相同视觉比例。网页使用独立方形原图时，对正方形容器设置 `border-radius: 4.6875%; overflow: hidden;`；不要对整张组合 Logo 再做裁切。生产项目建议固定版本并在构建时复制资源；离线应用不在运行时依赖 CDN。
 
 ## 规范与复现
 

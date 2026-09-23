@@ -69,6 +69,7 @@ for (const [productId, manifestPath] of Object.entries(brand.products ?? {})) {
 
 const expectedPngSizes = new Map([
   ["assets/logo/cinagroup-logo.png", [256, 256]],
+  ["assets/logo/cinagroup-logo-rounded.png", [256, 256]],
   ["assets/logo/cinagroup-logo-rounded-3px.png", [256, 256]],
   ["assets/logo/cinagroup-mark-black.png", [256, 256]],
   ["assets/logo/cinagroup-mark-white.png", [256, 256]],

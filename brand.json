@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "assetVersion": "2.0.1",
+  "assetVersion": "2.0.2",
   "brand": {
     "name": "CinaGroup",
     "chineseName": "海内集团",
@@ -9,7 +9,8 @@
     "githubOrganization": "cinagroup"
   },
   "visual": {
-    "cornerRadiusPx": 3,
+    "cornerRadiusRatio": 0.046875,
+    "cornerRadiusReference": { "sizePx": 256, "radiusPx": 12 },
     "colors": {
       "cyanTopLeft": "#5DBFE3",
       "cyanBottomLeft": "#02A4DC",
@@ -21,6 +22,7 @@
   },
   "assets": {
     "logo": "assets/logo/cinagroup-logo.png",
+    "logoRounded": "assets/logo/cinagroup-logo-rounded.png",
     "logoRounded3px": "assets/logo/cinagroup-logo-rounded-3px.png",
     "markBlack": "assets/logo/cinagroup-mark-black.png",
     "markWhite": "assets/logo/cinagroup-mark-white.png",
@@ -46,7 +48,7 @@
     "cinaseek": "products/cinaseek/brand.json"
   },
   "cdn": {
-    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.1/",
+    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.2/",
     "jsdelivrMain": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@main/",
     "rawMain": "https://raw.githubusercontent.com/cinagroup/cinabrand/main/"
   }

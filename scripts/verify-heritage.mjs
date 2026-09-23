@@ -16,7 +16,14 @@ const pkg = await json('package.json');
 assert.equal(manifest.version, brand.assetVersion);
 assert.equal(pkg.version, brand.assetVersion);
 assert.equal(brand.brand.wordmark, 'CINAGROUP');
-assert.equal(manifest.rules.cornerRadiusPx, 3);
+assert.equal(manifest.rules.cornerRadiusRatio, 12 / 256);
+assert.deepEqual(manifest.rules.cornerRadiusReference, { sizePx: 256, radiusPx: 12 });
+assert.equal(brand.visual.cornerRadiusRatio, manifest.rules.cornerRadiusRatio);
+assert.deepEqual(brand.visual.cornerRadiusReference, manifest.rules.cornerRadiusReference);
+const product = await json('products/cinaseek/brand.json');
+assert.equal(product.visual.logoCornerRadiusRatio, manifest.rules.cornerRadiusRatio);
+const productCss = (await read('products/cinaseek/tokens.css')).toString();
+assert.equal(Number(productCss.match(/--cinaseek-brand-logo-radius:\s*([\d.]+)%/)[1]) / 100, manifest.rules.cornerRadiusRatio);
 const checksums = new Set((await read('checksums.sha256')).toString().trim().split('\n').map(line => line.slice(66)));
 const source = await read(manifest.source.path);
 assert.equal(hash(source), '78a54b7a5a654d20acf292a6188c4303597633b42d6899b1c7197b51fa9c2a5d');
@@ -34,6 +41,26 @@ const glyphs = await Promise.all(['zh', 'en'].map(async language => {
   assert(rgba.some((value, i) => i % 4 === 3 && value === 255), 'Lettering must retain opaque strokes');
   return { bytes, meta, rgba };
 }));
+
+// Measure the rasterized edge as well as the declared radius. Fractional radii
+// on tiny icons cover part of a corner pixel rather than making it fully clear.
+async function verifyRoundedEdge(bytes, size, radius, name, frame) {
+  const tile = frame ? await sharp(bytes).extract({ left: frame.x, top: frame.y, width: size, height: size }).png().toBuffer() : bytes;
+  const rgba = await pixels(tile);
+  const a = (x, y) => rgba[(y * size + x) * 4 + 3];
+  const end = size - 1;
+  for (const [x, y] of [[0, 0], [end, 0], [0, end], [end, end]]) {
+    assert(a(x, y) < 255, `Square corner in ${name}`);
+    if (radius >= 3) assert(a(x, y) < 16, `Opaque outer corner in ${name}`);
+  }
+  const solid = Math.ceil(radius);
+  for (const [x, y] of [[solid, 0], [0, solid], [end - solid, end], [end, end - solid]]) assert.equal(a(x, y), 255, `Radius too large in ${name}`);
+  const measuredEdge = Array.from({ length: solid + 1 }, (_, x) => x).find(x => a(x, 0) >= 128);
+  const expectedEdge = Math.max(0, radius - Math.sqrt(radius - 0.25) - 0.5);
+  assert(Math.abs(measuredEdge - expectedEdge) <= 1.5, `Raster radius does not match ${radius}px in ${name}`);
+  assert.equal(a(Math.floor(size / 2), Math.floor(size / 2)), 255, `Transparent interior in ${name}`);
+}
+
 const seen = new Set();
 for (const asset of manifest.assets) {
   assert(!seen.has(asset.path), `Duplicate asset: ${asset.path}`);
@@ -44,20 +71,24 @@ for (const asset of manifest.assets) {
   if (asset.format === 'png') {
     const meta = await sharp(bytes).metadata();
     assert.deepEqual([meta.width, meta.height], [asset.width, asset.height], asset.path);
-    if (asset.width === asset.height && asset.cornerRadiusPx === 3) {
-      const rgba = await pixels(bytes);
-      const a = (x, y) => rgba[(y * asset.width + x) * 4 + 3];
-      const end = asset.width - 1;
-      for (const [x, y] of [[0, 0], [end, 0], [0, end], [end, end]]) assert(a(x, y) < 16, `Corner is not transparent: ${asset.path}`);
-      for (const [x, y] of [[3, 0], [0, 3], [end - 3, end], [end, end - 3]]) assert.equal(a(x, y), 255, `Radius is larger than 3px: ${asset.path}`);
-      assert(a(1, 0) > 0 && a(1, 0) < 255, `Missing 3px anti-aliased edge: ${asset.path}`);
+    if (asset.cornerRadiusPx > 0) {
+      const size = asset.symbolFrame?.size ?? asset.width;
+      const legacy = asset.role === 'legacy-fixed-3px';
+      assert.equal(asset.cornerRadiusPx, legacy ? 3 : size * 12 / 256, asset.path);
+      if (!legacy) assert.equal(asset.cornerRadiusRatio, 12 / 256, asset.path);
+      await verifyRoundedEdge(bytes, size, asset.cornerRadiusPx, asset.path, asset.symbolFrame);
     }
   }
   if (asset.format === 'svg') {
     const svg = bytes.toString();
     assert(!/<(?:script|text|foreignObject|path)\b/i.test(svg), 'Logo SVG must embed approved artwork without font substitution or redrawing');
     assert(svg.includes(`viewBox="0 0 ${asset.width} ${asset.height}"`));
-    if (asset.cornerRadiusPx === 3) assert(svg.includes('rx="3" ry="3"'));
+    if (asset.symbolFrame) {
+      const radius = asset.symbolFrame.size * 12 / 256;
+      assert.equal(asset.cornerRadiusPx, radius);
+      assert.equal(asset.cornerRadiusRatio, 12 / 256);
+      assert(svg.includes(`rx="${radius}" ry="${radius}"`), `SVG radius differs: ${asset.path}`);
+    }
     const embedded = [...svg.matchAll(/xlink:href="([^"]+)"/g)].map(match => {
       assert(match[1].startsWith('data:image/png;base64,'), 'SVG must not rely on external image resources');
       return Buffer.from(match[1].split(',')[1], 'base64');
@@ -82,6 +113,10 @@ for (const asset of manifest.assets) {
     for (const [x, y, width, height] of boxes) {
       assert(x + width <= asset.width && y + height <= asset.height, `Clipped artwork in ${asset.path}`);
     }
+    if (asset.symbolFrame) {
+      const { x, y, size } = asset.symbolFrame;
+      assert.deepEqual(boxes[0], [x, y, size, size], `Symbol frame differs: ${asset.path}`);
+    }
     if (/cinagroup-(horizontal|stacked|wordmark)(-white)?\.svg$/.test(asset.path)) {
       const [chineseBox, englishBox] = boxes.slice(-2);
       assert.equal(chineseBox[0], englishBox[0], `Bilingual left edges differ: ${asset.path}`);
@@ -94,6 +129,7 @@ for (const asset of manifest.assets) {
     }
   }
   if (asset.format === 'ico') {
+    assert.equal(asset.cornerRadiusRatio, 12 / 256);
     assert.equal(bytes.readUInt16LE(4), asset.sizes.length);
     let end = 6 + asset.sizes.length * 16;
     for (let i = 0; i < asset.sizes.length; i++) {
@@ -104,10 +140,11 @@ for (const asset of manifest.assets) {
       assert(offset + length <= bytes.length);
       const meta = await sharp(bytes.subarray(offset, offset + length)).metadata();
       assert.deepEqual([meta.width, meta.height], [asset.sizes[i], asset.sizes[i]]);
+      await verifyRoundedEdge(bytes.subarray(offset, offset + length), meta.width, meta.width * 12 / 256, `${asset.path}:${meta.width}`);
       end = offset + length;
     }
     assert.equal(end, bytes.length);
   }
 }
 for (const size of [16, 24, 32, 48, 64, 96, 128, 180, 192, 256, 512, 1024]) assert(seen.has(`assets/icons/rounded/cinagroup-${size}.png`));
-console.log(`Verified ${seen.size} heritage exports: original symbol pixels, embedded lettering, equal bilingual widths, 3px corners, SVG bounds and ICO payloads.`);
+console.log(`Verified ${seen.size} heritage exports: original symbol pixels, embedded lettering, equal bilingual widths, proportional rounded edges, SVG bounds and ICO payloads.`);
