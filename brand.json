@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "assetVersion": "2.0.2",
+  "assetVersion": "2.1.0",
   "brand": {
     "name": "CinaGroup",
     "chineseName": "海内集团",
@@ -18,6 +18,15 @@
       "ink": "#000000",
       "cloud": "#FBFBFA",
       "deepSea": "#123B56"
+    }
+  },
+  "typography": {
+    "english": {
+      "family": "Geist",
+      "style": "Regular",
+      "weight": 400,
+      "cornerRadiusRatio": 0.5,
+      "referenceStroke": "uppercase I vertical stem"
     }
   },
   "assets": {
@@ -40,7 +49,8 @@
     "heritageStacked": "assets/heritage/cinagroup-stacked.png",
     "heritageEnglish": "assets/heritage/cinagroup-english.png",
     "heritageWordmark": "assets/heritage/cinagroup-wordmark.png",
-    "heritagePreview": "assets/heritage/preview.png"
+    "heritagePreview": "assets/heritage/preview.png",
+    "englishWordmarkVector": "assets/heritage/cinagroup-wordmark-en.svg"
   },
   "heritageManifest": "assets/heritage/manifest.json",
   "legacyMonochromeAssets": ["assets/logo/cinagroup-mark-black.png", "assets/logo/cinagroup-mark-white.png"],
@@ -48,7 +58,7 @@
     "cinaseek": "products/cinaseek/brand.json"
   },
   "cdn": {
-    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.2/",
+    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.0/",
     "jsdelivrMain": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@main/",
     "rawMain": "https://raw.githubusercontent.com/cinagroup/cinabrand/main/"
   }

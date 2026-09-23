@@ -6,3 +6,4 @@ Copyright © CinaGroup. All rights reserved.
 
 第三方使用、联合品牌、媒体发布和商业分发需要取得 CinaGroup 的明确许可。对素材的技术性缩放、格式转换和平台要求的遮罩不应改变原始标志的比例、轮廓或品牌含义。
 
+第三方字体例外：`sources/fonts/geist/Geist-Regular.otf` 为未经修改的 Geist 字体软件，版权归 The Geist Project Authors，按随附的 [SIL Open Font License 1.1](sources/fonts/geist/OFL.txt) 提供；上文的品牌素材限制不取代该字体许可证。圆角 CINAGROUP 字标是基于字体轮廓制作的品牌图形，不作为修改版字体软件分发。

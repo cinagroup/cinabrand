@@ -1,7 +1,8 @@
 *.ico binary
 *.png binary
+*.otf binary
 *.json text eol=lf
 *.md text eol=lf
+*.txt text eol=lf
 *.mjs text eol=lf
 *.sha256 text eol=lf
-

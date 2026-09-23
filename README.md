@@ -1,6 +1,6 @@
 # 海内集团 CinaGroup Brand
 
-海内集团官方通用品牌资产仓库。当前集团标准为 **v2.0.2 传承字标**：保留原始左侧图案、蓝色渐变及中英文字形，中英双行组合等宽、左右对齐，蓝色底板采用边长 **4.6875%** 的等比例圆角。
+海内集团官方通用品牌资产仓库。当前集团标准为 **v2.1.0 传承中文 + Geist 英文**：保留原始左侧图案、蓝色渐变与中文字形，英文 CINAGROUP 使用 **Geist Regular** 轮廓，尖角采用主笔画宽度 **50%** 的圆角半径。中英双行组合等宽、左右对齐，蓝色底板采用边长 **4.6875%** 的等比例圆角。
 
 ![海内集团传承字标套件](assets/heritage/preview.png)
 
@@ -13,9 +13,11 @@
 | 英文组合 | [下载](assets/heritage/cinagroup-english.png) | [下载](assets/heritage/cinagroup-english.svg) | 3072 × 1152 |
 | 纯字标组合 | [下载](assets/heritage/cinagroup-wordmark.png) | [下载](assets/heritage/cinagroup-wordmark.svg) | 2176 × 960 |
 
-每种组合还提供 `-white` 文字反白版本，以及四分之一宽度的 PNG，例如 [`cinagroup-horizontal-832.png`](assets/heritage/cinagroup-horizontal-832.png)。全部组合保留左侧全彩原图；反白版本仅改变文字颜色。SVG 自包含原稿位图，**不是纯矢量描摹稿**。
+每种组合还提供 `-white` 文字反白版本，以及四分之一宽度的 PNG，例如 [`cinagroup-horizontal-832.png`](assets/heritage/cinagroup-horizontal-832.png)。全部组合保留左侧全彩原图；反白版本仅改变文字颜色。组合 SVG 自包含图形和中文位图，英文采用矢量路径；**整张组合不是纯矢量稿**，显示时不依赖本机字体。
 
-独立素材：[左侧原图](assets/heritage/cinagroup-symbol-source.png)、[中文原字标](assets/heritage/cinagroup-wordmark-zh.png)、[英文原字标](assets/heritage/cinagroup-wordmark-en.png)。完整文件、尺寸与校验值见 [套件清单](assets/heritage/manifest.json)。
+独立素材：[左侧原图](assets/heritage/cinagroup-symbol-source.png)、[中文原字标](assets/heritage/cinagroup-wordmark-zh.png)、[Geist 圆角英文 PNG](assets/heritage/cinagroup-wordmark-en.png)、[英文纯矢量 SVG](assets/heritage/cinagroup-wordmark-en.svg)。完整文件、尺寸与校验值见 [套件清单](assets/heritage/manifest.json)。
+
+英文采用官方 Geist v1.7.2 的 Regular（400）字重；以大写 I 的 86 字体单位笔画为基准，圆角半径为 43 单位。狭窄接点局部缩小半径，避免相邻圆角重叠。字体、来源校验值与 OFL 许可证保存在 [字体源目录](sources/fonts/geist/README.md)。
 
 ## 独立图标
 
@@ -30,10 +32,10 @@
 ## 固定版本引用
 
 ```html
-<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.2/assets/heritage/cinagroup-horizontal-832.png"
+<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.0/assets/heritage/cinagroup-horizontal-832.png"
      width="832" height="288" alt="海内集团 CINAGROUP">
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.2/assets/icons/web/favicon.ico">
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.2/assets/icons/web/apple-touch-icon.png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.0/assets/icons/web/favicon.ico">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.0/assets/icons/web/apple-touch-icon.png">
 ```
 
 圆角随图形整体缩放，保持相同视觉比例。网页使用独立方形原图时，对正方形容器设置 `border-radius: 4.6875%; overflow: hidden;`；不要对整张组合 Logo 再做裁切。生产项目建议固定版本并在构建时复制资源；离线应用不在运行时依赖 CDN。
@@ -44,7 +46,8 @@
 - [品牌资产政策](BRAND_POLICY.md)：使用授权。
 - [机器可读清单](brand.json) / [SHA-256 清单](checksums.sha256)。
 - [核准原稿](sources/heritage/cinagroup_20251026.png)：从用户提供的无损 PNG 保留。
-- [生成脚本](scripts/build-heritage.mjs)：从核准原稿生成资产。
+- [生成脚本](scripts/build-heritage.mjs)：从核准图形、中文原稿和固定版本 Geist 字体生成资产。
+- [英文轮廓生成器](scripts/geist-wordmark.mjs)：保留字距，以相切圆弧处理英文尖角。
 - [CinaSeek 产品契约](products/cinaseek/brand.json)、[术语映射](products/cinaseek/terminology.json)、[界面 Token](products/cinaseek/tokens.css)。
 
 ```bash

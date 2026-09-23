@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createGeistWordmark } from './geist-wordmark.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const sourcePath = 'sources/heritage/cinagroup_20251026.png';
@@ -27,8 +28,7 @@ const png = { compressionLevel: 9, adaptiveFiltering: true };
 const mark = await sharp(source).extract({ left: 0, top: 0, width: 1024, height: 1024 }).png(png).toBuffer();
 await savePng('assets/heritage/cinagroup-symbol-source.png', mark, { role: 'approved-color-source' });
 
-// Remove only white background from the original black lettering. No retyping,
-// font substitution, tracing or generative redraw is involved.
+// Preserve the original Chinese glyphs, removing only their white background.
 async function extractLettering(rect) {
   const { data, info } = await sharp(source).extract(rect).removeAlpha().raw().toBuffer({ resolveWithObject: true });
   const output = Buffer.alloc(info.width * info.height * 4);
@@ -40,25 +40,25 @@ async function extractLettering(rect) {
     .trim({ threshold: 0 }).png(png).toBuffer();
 }
 const chineseRect = { left: 1120, top: 110, width: 2040, height: 510 };
-const englishRect = { left: 1120, top: 620, width: 2040, height: 300 };
 const chinese = await extractLettering(chineseRect);
-const english = await extractLettering(englishRect);
+const geist = await createGeistWordmark(root);
+const english = await sharp(Buffer.from(geist.svg())).resize({ width: 4096 }).png(png).toBuffer();
 const cn = await sharp(chinese).metadata();
-const en = await sharp(english).metadata();
+const en = { width: geist.width, height: geist.height };
 await savePng('assets/heritage/cinagroup-wordmark-zh.png', chinese, { role: 'original-chinese-lettering' });
-await savePng('assets/heritage/cinagroup-wordmark-en.png', english, { role: 'original-english-lettering' });
+await savePng('assets/heritage/cinagroup-wordmark-en.png', english, { role: 'rounded-geist-lettering' });
+await save('assets/heritage/cinagroup-wordmark-en.svg', Buffer.from(geist.svg()), { format: 'svg', width: geist.width, height: geist.height, role: 'rounded-geist-lettering', embeddedRaster: false });
 async function whiteLettering(buffer) {
   const { data, info } = await sharp(buffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   for (let i = 0; i < data.length; i += 4) data[i] = data[i + 1] = data[i + 2] = 255;
   return sharp(data, { raw: info }).png(png).toBuffer();
 }
 const whiteCn = await whiteLettering(chinese);
-const whiteEn = await whiteLettering(english);
 const uri = data => `data:image/png;base64,${data.toString('base64')}`;
 const header = (width, height) => `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><title>海内集团 CINAGROUP</title>`;
 const image = (buffer, x, y, width, height, attrs = '') => `<image x="${x}" y="${y}" width="${width}" height="${height}" xlink:href="${uri(buffer)}" ${attrs}/>`;
 
-// Scale each complete original wordmark proportionally to the same visible
+// Scale each complete wordmark proportionally to the same visible
 // width. Match both endpoints without horizontally stretching any glyph.
 const bilingual = (x, y, width, gap = 64) => ({
   chinese: [x, y, width],
@@ -69,7 +69,7 @@ const centeredTextTop = (height, width, gap = 64) =>
 const layouts = {
   horizontal: { width: 3328, height: 1152, tile: [64, 64, 1024], ...bilingual(1248, centeredTextTop(1152, 2016), 2016) },
   stacked: { width: 1408, height: 1664, tile: [224, 64, 960], ...bilingual(112, 1112, 1184, 40) },
-  english: { width: 3072, height: 1152, tile: [64, 64, 1024], english: [1248, 448, 1760] },
+  english: { width: 3072, height: 1152, tile: [64, 64, 1024], english: [1248, (1152 - 1760 * en.height / en.width) / 2, 1760] },
   wordmark: { width: 2176, height: 960, ...bilingual(64, centeredTextTop(960, 2048), 2048) },
 };
 function lockup(name, width, reversed = false) {
@@ -82,10 +82,13 @@ function lockup(name, width, reversed = false) {
     svg += `<defs><clipPath id="corners"><rect x="${x}" y="${y}" width="${size}" height="${size}" rx="${radiusFor(size)}" ry="${radiusFor(size)}"/></clipPath></defs>`;
     svg += image(mark, x, y, size, size, 'clip-path="url(#corners)"');
   }
-  for (const [key, buffer, meta] of [['chinese', reversed ? whiteCn : chinese, cn], ['english', reversed ? whiteEn : english, en]]) {
-    if (!layout[key]) continue;
-    const [x, y, w] = layout[key].map(n => n * scale);
-    svg += image(buffer, x, y, w, w * meta.height / meta.width);
+  if (layout.chinese) {
+    const [x, y, w] = layout.chinese.map(n => n * scale);
+    svg += image(reversed ? whiteCn : chinese, x, y, w, w * cn.height / cn.width);
+  }
+  if (layout.english) {
+    const [x, y, w] = layout.english.map(n => n * scale);
+    svg += `<svg data-wordmark="english" x="${x}" y="${y}" width="${w}" height="${w * en.height / en.width}" viewBox="${geist.viewBox}"><path fill="${reversed ? '#ffffff' : '#000000'}" d="${geist.path}"/></svg>`;
   }
   return Buffer.from(svg + '</svg>');
 }
@@ -176,14 +179,15 @@ for (const [size, x] of [[192, 866], [128, 1134], [64, 1342], [32, 1462]]) {
   sheet += image(await icon(size, true), x, 1400 - size, size, size);
   sheet += label(`${size}px`, x, 1440, 20);
 }
-sheet += label('原图图形与字形保留 · 圆角比例 4.6875%（256px 对应 12px）', 48, 1575, 20);
+sheet += label('传承中文 + Geist Regular · 英文圆角半径为主笔画宽度的 50% · 底板圆角 4.6875%', 48, 1575, 20);
 sheet += '</svg>';
 await savePng('assets/heritage/preview.png', await sharp(Buffer.from(sheet)).png(png).toBuffer(), { role: 'preview' });
 
 const manifest = {
-  schemaVersion: 1, version: '2.0.2', name: '海内集团 · 传承字标', englishWordmark: 'CINAGROUP',
-  source: { path: sourcePath, sha256: sourceHash, width: 3238, height: 1024, symbolRect: { left: 0, top: 0, width: 1024, height: 1024 }, chineseRect, englishRect },
-  rules: { shape: 'unchanged-source-raster', lettering: 'extracted-original-glyphs', bilingualAlignment: 'equal-width-left-and-right', cornerRadiusRatio, cornerRadiusReference: { sizePx: 256, radiusPx: 12 }, svg: 'self-contained SVG with embedded PNG artwork; not traced vector paths', platformIcons: 'square artwork; OS applies its own mask' },
+  schemaVersion: 1, version: '2.1.0', name: '海内集团 · 传承字标 + Geist', englishWordmark: 'CINAGROUP',
+  source: { path: sourcePath, sha256: sourceHash, width: 3238, height: 1024, symbolRect: { left: 0, top: 0, width: 1024, height: 1024 }, chineseRect },
+  typography: { english: geist.metadata },
+  rules: { shape: 'unchanged-source-raster', lettering: 'original Chinese glyphs; custom rounded Geist Regular English outlines', bilingualAlignment: 'equal-width-left-and-right', cornerRadiusRatio, cornerRadiusReference: { sizePx: 256, radiusPx: 12 }, svg: 'self-contained hybrid SVG: original symbol and Chinese PNGs, vector English paths', platformIcons: 'square artwork; OS applies its own mask' },
   assets: records,
 };
 await writeFile(resolve(root, 'assets/heritage/manifest.json'), JSON.stringify(manifest, null, 2) + '\n');

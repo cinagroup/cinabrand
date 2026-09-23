@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
+import { createGeistWordmark, roundOutline } from './geist-wordmark.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const read = path => readFile(resolve(root, path));
@@ -13,6 +14,35 @@ const pixels = buffer => sharp(buffer).ensureAlpha().raw().toBuffer();
 const manifest = await json('assets/heritage/manifest.json');
 const brand = await json('brand.json');
 const pkg = await json('package.json');
+const geist = await createGeistWordmark(root);
+assert.deepEqual(manifest.typography.english, geist.metadata);
+assert.deepEqual(brand.typography.english, {
+  family: 'Geist', style: 'Regular', weight: 400, cornerRadiusRatio: 0.5,
+  referenceStroke: 'uppercase I vertical stem',
+});
+assert.equal(geist.metadata.strokeWidthUnits, 86);
+assert.equal(geist.metadata.cornerRadiusUnits, 43);
+assert(geist.metrics.length > 0, 'English corners must actually be rounded');
+for (const corner of geist.metrics) {
+  assert(corner.radius > 0 && corner.radius <= 43);
+  for (const [p, tangent] of [[corner.from, corner.incomingTangent], [corner.to, corner.outgoingTangent]]) {
+    const radial = p.map((n, i) => n - corner.center[i]);
+    assert(Math.abs(Math.hypot(...radial) - corner.radius) < 1e-5, 'Fillet must have the declared radius');
+    assert(Math.abs(radial[0] * tangent[0] + radial[1] * tangent[1]) < 1e-5, 'Fillet must meet the original curve tangentially');
+  }
+}
+// At exactly half a rectangular stem's width, the two top arcs must meet
+// without a flat edge, overlap, or a reduced radius (a semicircular cap).
+const capsule = roundOutline([
+  { type: 'M', x: 0, y: 0 }, { type: 'L', x: 86, y: 0 },
+  { type: 'L', x: 86, y: 710 }, { type: 'L', x: 0, y: 710 }, { type: 'Z' },
+], 43);
+assert.equal(capsule.metrics.length, 4);
+assert(capsule.metrics.every(m => m.radius === 43));
+for (const m of capsule.metrics) {
+  assert(Math.abs(m.center[0] - 43) < 1e-8);
+  assert(Math.min(Math.abs(m.center[1] - 43), Math.abs(m.center[1] - 667)) < 1e-8);
+}
 assert.equal(manifest.version, brand.assetVersion);
 assert.equal(pkg.version, brand.assetVersion);
 assert.equal(brand.brand.wordmark, 'CINAGROUP');
@@ -81,8 +111,17 @@ for (const asset of manifest.assets) {
   }
   if (asset.format === 'svg') {
     const svg = bytes.toString();
-    assert(!/<(?:script|text|foreignObject|path)\b/i.test(svg), 'Logo SVG must embed approved artwork without font substitution or redrawing');
+    assert(!/<(?:script|text|foreignObject)\b/i.test(svg), 'Logo SVG must use fixed artwork without runtime fonts or scripts');
+    if (asset.role === 'rounded-geist-lettering') {
+      assert.equal(svg, geist.svg(), 'Standalone English vector must match the pinned Geist outlines');
+      continue;
+    }
     assert(svg.includes(`viewBox="0 0 ${asset.width} ${asset.height}"`));
+    const paths = [...svg.matchAll(/<path fill="([^"]+)" d="([^"]+)"\/>/g)];
+    assert.equal(paths.length, 1, 'Only the Geist English outline may be drawn');
+    assert.equal(paths[0][2], geist.path);
+    assert.equal(paths[0][1], asset.path.includes('-white.') ? '#ffffff' : '#000000');
+    assert(svg.includes(`viewBox="${geist.viewBox}"`));
     if (asset.symbolFrame) {
       const radius = asset.symbolFrame.size * 12 / 256;
       assert.equal(asset.cornerRadiusPx, radius);
@@ -108,7 +147,7 @@ for (const asset of manifest.assets) {
       }
     }
     // Check actual artwork geometry, including equal-width bilingual rows.
-    const boxes = [...svg.matchAll(/<image x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)"/g)]
+    const boxes = [...svg.matchAll(/<(?:image|svg data-wordmark="english") x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)"/g)]
       .map(match => match.slice(1).map(Number));
     for (const [x, y, width, height] of boxes) {
       assert(x + width <= asset.width && y + height <= asset.height, `Clipped artwork in ${asset.path}`);
@@ -122,7 +161,7 @@ for (const asset of manifest.assets) {
       assert.equal(chineseBox[0], englishBox[0], `Bilingual left edges differ: ${asset.path}`);
       assert.equal(chineseBox[2], englishBox[2], `Bilingual widths differ: ${asset.path}`);
       for (const [index, box] of [chineseBox, englishBox].entries()) {
-        const meta = glyphs[index].meta;
+        const meta = index === 0 ? glyphs[0].meta : geist;
         assert(Math.abs(box[2] / box[3] - meta.width / meta.height) < 1e-8, `Distorted wordmark: ${asset.path}`);
       }
       assert(englishBox[1] > chineseBox[1] + chineseBox[3], `Overlapping wordmarks: ${asset.path}`);
@@ -147,4 +186,4 @@ for (const asset of manifest.assets) {
   }
 }
 for (const size of [16, 24, 32, 48, 64, 96, 128, 180, 192, 256, 512, 1024]) assert(seen.has(`assets/icons/rounded/cinagroup-${size}.png`));
-console.log(`Verified ${seen.size} heritage exports: original symbol pixels, embedded lettering, equal bilingual widths, proportional rounded edges, SVG bounds and ICO payloads.`);
+console.log(`Verified ${seen.size} heritage exports: original symbol pixels, Chinese lettering, Geist outlines and tangent half-stroke fillets, equal bilingual widths, proportional tile corners, SVG bounds and ICO payloads.`);
