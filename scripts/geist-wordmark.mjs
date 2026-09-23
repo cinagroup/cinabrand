@@ -98,7 +98,7 @@ function fillet(incoming, outgoing, radius, turn) {
   return null;
 }
 
-export function roundOutline(commands, radius) {
+export function roundOutline(commands, radius, preservedCorners = []) {
   const metrics = [];
   let path = '';
   for (const edges of contours(commands)) {
@@ -108,7 +108,9 @@ export function roundOutline(commands, radius) {
       return Math.atan2(cross(a, b), dot(a, b));
     });
     const corners = turns.map((turn, i) => {
-      if (Math.abs(turn) < 0.01) return { t: 1, u: 0, radius: 0 };
+      if (Math.abs(turn) < 0.01 || preservedCorners.some(p => length(sub(p, edges[i][0])) < 1e-8)) {
+        return { t: 1, u: 0, radius: 0 };
+      }
       let r = radius;
       for (let tries = 0; tries < 80; tries++, r *= 0.95) {
         const corner = fillet(edges[(i + count - 1) % count], edges[i], r, turn);
@@ -158,12 +160,26 @@ export async function createGeistWordmark(root) {
   const stem = font.charToGlyph('I').getBoundingBox();
   const strokeWidth = stem.x2 - stem.x1;
   const radius = strokeWidth / 2;
-  const rounded = roundOutline(original.commands, radius);
+  // Keep N's two acute inner joins exactly at their original vertices. Other
+  // corners, including N's outer terminals, retain the existing rounding.
+  const preservedCorners = [];
+  const nIndex = font.charToGlyph('N').index;
+  font.forEachGlyph('CINAGROUP', 0, 0, font.unitsPerEm, { kerning: true }, (glyph, x, y, size, options) => {
+    if (glyph.index !== nIndex) return;
+    for (const edges of contours(glyph.getPath(x, y, size, options, font).commands)) {
+      edges.forEach((edge, i) => {
+        const a = tangent(edges[(i + edges.length - 1) % edges.length], 1), b = tangent(edge, 0);
+        if (Math.atan2(cross(a, b), dot(a, b)) > Math.PI / 2) preservedCorners.push(edge[0]);
+      });
+    }
+  });
+  if (preservedCorners.length !== 2) throw new Error('Expected exactly two acute inner corners in Geist N');
+  const rounded = roundOutline(original.commands, radius, preservedCorners);
   const box = original.getBoundingBox();
   const width = box.x2 - box.x1, height = box.y2 - box.y1;
   const viewBox = [box.x1, box.y1, width, height].map(f).join(' ');
   const svg = (color = '#000000') => `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="${viewBox}"><title>CINAGROUP — rounded Geist Regular</title><path fill="${color}" d="${rounded.path}"/></svg>`;
-  return { ...rounded, original, width, height, viewBox, svg,
-    metadata: { ...fontSource, text: 'CINAGROUP', unitsPerEm: font.unitsPerEm, referenceStroke: 'uppercase I vertical stem', strokeWidthUnits: strokeWidth, cornerRadiusRatio: 0.5, cornerRadiusUnits: radius, cornerCount: rounded.metrics.length, locallyReducedCorners: rounded.metrics.filter(m => m.radius < radius - 1e-6).length, rounding: 'tangent circular fillets; locally reduced where adjacent corners would overlap', kerning: true },
+  return { ...rounded, original, width, height, viewBox, svg, preservedCorners,
+    metadata: { ...fontSource, text: 'CINAGROUP', unitsPerEm: font.unitsPerEm, referenceStroke: 'uppercase I vertical stem', strokeWidthUnits: strokeWidth, cornerRadiusRatio: 0.5, cornerRadiusUnits: radius, cornerCount: rounded.metrics.length, locallyReducedCorners: rounded.metrics.filter(m => m.radius < radius - 1e-6).length, rounding: 'tangent circular fillets; locally reduced where adjacent corners would overlap', sharpCornerExceptions: [{ glyph: 'N', corners: 'upper and lower inner acute joins', count: 2 }], kerning: true },
   };
 }

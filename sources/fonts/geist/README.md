@@ -10,4 +10,6 @@ The original font binary is unchanged. `scripts/geist-wordmark.mjs` extracts onl
 
 The reference stem is uppercase I: 86 font units at 1000 units per em. The nominal circular fillet radius is **43 units (half the stem width)**. Tangent circular arcs replace sharp line/curve junctions; untouched curve segments retain their original Bezier geometry. Adjacent fillets are reduced locally where necessary to avoid overlap. The generated manifest records the number of affected corners.
 
+Starting with brand v2.1.1, **N's upper and lower inner acute joins retain their original sharp vertices**. Its other corners and the remaining letters keep the existing rounding. The exception vertices are read directly from N's outline at its kerning-aware wordmark position.
+
 `assets/heritage/cinagroup-wordmark-en.svg` is the resulting vector illustration; the other logo SVGs embed this English path alongside the original symbol and Chinese raster artwork. No system font is needed to display the assets.

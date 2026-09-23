@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2.1.0",
+  "version": "2.1.1",
   "name": "海内集团 · 传承字标 + Geist",
   "englishWordmark": "CINAGROUP",
   "source": {
@@ -38,9 +38,16 @@
       "strokeWidthUnits": 86,
       "cornerRadiusRatio": 0.5,
       "cornerRadiusUnits": 43,
-      "cornerCount": 57,
+      "cornerCount": 55,
       "locallyReducedCorners": 5,
       "rounding": "tangent circular fillets; locally reduced where adjacent corners would overlap",
+      "sharpCornerExceptions": [
+        {
+          "glyph": "N",
+          "corners": "upper and lower inner acute joins",
+          "count": 2
+        }
+      ],
       "kerning": true
     }
   },
@@ -75,7 +82,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-wordmark-en.png",
-      "sha256": "d1af4559139b9e1c9a8624c88515a2362c041c26902baf903ea9fd0365d6dda2",
+      "sha256": "12f47d89626f6176cd1a0551c1ce8f167e1683941d67da907a68d572a5f55516",
       "format": "png",
       "width": 4096,
       "height": 535,
@@ -83,7 +90,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-wordmark-en.svg",
-      "sha256": "457acb0ab2d68e10c0ea525dbbbaf491570c44ea84c87933adfbf593c8da110c",
+      "sha256": "37c87e41f0c5f4916602e8544b3b921bbb7a1ee0134a44c4f4471a93fa4ccbca",
       "format": "svg",
       "width": 5679,
       "height": 742,
@@ -92,7 +99,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-horizontal.svg",
-      "sha256": "a65a28fc659375b966ab58d80bcb8a4139a7ccbd7667c2e14f9bba2a3a899a5c",
+      "sha256": "e6e8684485535091e87b0ed6093d6ce0a4d8bea6efd47824afc74d0ac853da54",
       "format": "svg",
       "width": 3328,
       "height": 1152,
@@ -107,7 +114,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-horizontal.png",
-      "sha256": "1fe387c2b4e2a2442790aaf2d129720c38bb2fe0e6d270ef7f51b74b208dd41c",
+      "sha256": "365150c8fcd2f07501fa152919c0fc383db50bc1f77719c01460ce1679ddcfe9",
       "format": "png",
       "width": 3328,
       "height": 1152,
@@ -121,7 +128,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-horizontal-832.png",
-      "sha256": "f8b819ff0794756266d29b6f60874b39991893f1854779b91ff6a062033ded8d",
+      "sha256": "7f7cd123952e415817e77356512f27005187a7c285c564dedcc920314ca1e23a",
       "format": "png",
       "width": 832,
       "height": 288,
@@ -135,7 +142,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-horizontal-white.svg",
-      "sha256": "985251ab644afeb5377341401be4e5bd2dd5a98b47fbf96f3a66471ea40295d5",
+      "sha256": "b5a297ed0e96a23146e6f3684ab8c89e036a864911f18e68df13ae5407a9da4d",
       "format": "svg",
       "width": 3328,
       "height": 1152,
@@ -150,7 +157,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-horizontal-white.png",
-      "sha256": "e66b9eed89d5d783c85cce359e99c15c4e6d3a48c5f3107468a1e5aac6da144a",
+      "sha256": "97e850ad19e550c5ed74aac1b7930f9476832ffa2b7b66f14a16426d47996af1",
       "format": "png",
       "width": 3328,
       "height": 1152,
@@ -164,7 +171,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-horizontal-white-832.png",
-      "sha256": "2d14c477ec8d7f49b2f190ace360b20ecf605dd3240d7f8222fe0956ce310a41",
+      "sha256": "29eccea0edd904e8b9425057f6ba4bb1e33e085afa3d861683a78eff42e7d65a",
       "format": "png",
       "width": 832,
       "height": 288,
@@ -178,7 +185,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-stacked.svg",
-      "sha256": "39833566d267599b237aa5e66c25d0255636a5f9d34d733a50bf0fb185254c6c",
+      "sha256": "2e28edc5e5b08594dad58f87ba71a6f48933e1ec36201cbd331f2200a9fb39ff",
       "format": "svg",
       "width": 1408,
       "height": 1664,
@@ -193,7 +200,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-stacked.png",
-      "sha256": "dca59d7af8bb04010b78660e5de9bec25f75b72aa0bbd01198670b4457654a1a",
+      "sha256": "4bd2bd6362e8bea667357ede12f797869d20a691f3e34d873575c7c159ed96e6",
       "format": "png",
       "width": 1408,
       "height": 1664,
@@ -207,7 +214,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-stacked-352.png",
-      "sha256": "64d2ec7bd019014a235f7a7d1c463909218f608316c98970b91f10c567066e82",
+      "sha256": "f75d5a8c10be5502f4f23e20134399babf3546d2c31d5079f54b30167f3b871c",
       "format": "png",
       "width": 352,
       "height": 416,
@@ -221,7 +228,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-stacked-white.svg",
-      "sha256": "bb91232e0cc208047e833156397a080dbb95db7bf9746860bec6e67febb3ec87",
+      "sha256": "4e56d0bf84d1e4e4dce2b3b085a35063153a69d9b070cccaa068935efa3f486b",
       "format": "svg",
       "width": 1408,
       "height": 1664,
@@ -236,7 +243,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-stacked-white.png",
-      "sha256": "569db4688678e196cd1e4dc1f66825b8c0c7776e1fb23d067540251e07188ae1",
+      "sha256": "ec8c2ae3dbbe0ab5956b253b5cd91752b42a39eccd00112be1c72bea7fe52253",
       "format": "png",
       "width": 1408,
       "height": 1664,
@@ -250,7 +257,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-stacked-white-352.png",
-      "sha256": "0ac873507be5a22762c97f2bd29cedbce6a322b66e1f1658ab6312fea44df8bb",
+      "sha256": "bd44d6ca752f7e45817e1c7b567c091342b9e1bec3493af6d92688ed5ad97b3b",
       "format": "png",
       "width": 352,
       "height": 416,
@@ -264,7 +271,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-english.svg",
-      "sha256": "a12b907a0aebaa87feb0578beb0527caaa0cbdcba0cb2b2689d655bb26bde50f",
+      "sha256": "c5d69f941e975c236dd6db8f5ee93fa3f88d788d1364a83b2198f7ffd1c22dd7",
       "format": "svg",
       "width": 3072,
       "height": 1152,
@@ -279,7 +286,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-english.png",
-      "sha256": "df40719167159c660613f6be47a1ea7f8f0be389596e35dee06605e7460358fa",
+      "sha256": "16d1689512cb35c72a1ccfa310afc59b1f0545af6471a2fce8c271539bb3a9d0",
       "format": "png",
       "width": 3072,
       "height": 1152,
@@ -293,7 +300,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-english-768.png",
-      "sha256": "876799f69c6fdbec1c2e91a8bee3855e00e9bc5f1dfd0d981cb1a44da27698fa",
+      "sha256": "5777c78ccb5f218427e0fc9951eb8b693e6ac2de1a272c515fbeffdcb4275366",
       "format": "png",
       "width": 768,
       "height": 288,
@@ -307,7 +314,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-english-white.svg",
-      "sha256": "0ca542c5dd5ddf3bab84adb5fc0318df563dd62055ef7810b69e9186db0ca9df",
+      "sha256": "982a0bff8364451857eca4f2a3ab8f3a24359aad0e5107a89ee93b3a3df64946",
       "format": "svg",
       "width": 3072,
       "height": 1152,
@@ -322,7 +329,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-english-white.png",
-      "sha256": "f423c117ef65edf0bdb8c5de2bc8813b7ef3df244db604c3d02bac2e4be5ec94",
+      "sha256": "60121c6798baba50525df0d99a08f1a6302371acf9380c3dd19dffc1e4d07655",
       "format": "png",
       "width": 3072,
       "height": 1152,
@@ -336,7 +343,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-english-white-768.png",
-      "sha256": "1015bc34dbf171e345291d88a6d2dff0fd17a94eb72b007c9b950d07827daf62",
+      "sha256": "1d36746baaa4f1ab8db7122739698afd0589e9f783542848c45492f8eb0f3792",
       "format": "png",
       "width": 768,
       "height": 288,
@@ -350,7 +357,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-wordmark.svg",
-      "sha256": "50bf9c3af3c8755eead0617e47022efa024a45fa9e615f21d281ae05fbccfc37",
+      "sha256": "5c8d51dd0e69ad96cbc3ea15acdef4933503831d524f6a8f1ef220f0b5677a79",
       "format": "svg",
       "width": 2176,
       "height": 960,
@@ -359,7 +366,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-wordmark.png",
-      "sha256": "44a52f2542c42bad369647bd05408b8259cfd73d1e5a4baf567c62f47c9a9c3d",
+      "sha256": "2bdeaef12f3a0abbe91d9423e3ddcea0922e0a147b565f35d048981302bf20b1",
       "format": "png",
       "width": 2176,
       "height": 960,
@@ -367,7 +374,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-wordmark-544.png",
-      "sha256": "33c307c9251245a1551dba21a986be7b4678f6302872f53978aeb7d4aa3892be",
+      "sha256": "456582d0670a2dd11ea7020bffe59d46ffeba7075501b532c4e3d7512414a814",
       "format": "png",
       "width": 544,
       "height": 240,
@@ -375,7 +382,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-wordmark-white.svg",
-      "sha256": "f6d893928c683a6778ef2d19319fe9005eb6aa4e674098df2a98897fe3472390",
+      "sha256": "72d89677aa2919c4f54a56c778a7970a07aa57a095c29c0487be1eb255798407",
       "format": "svg",
       "width": 2176,
       "height": 960,
@@ -384,7 +391,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-wordmark-white.png",
-      "sha256": "8f6099a7868b91be1acba0b804a511636ae308e79cc91aa79645f8a848cb5779",
+      "sha256": "439d96a21a56ae3f232a0f80db51d8cda8f93aed169fdc290da24f3ba4d7935b",
       "format": "png",
       "width": 2176,
       "height": 960,
@@ -392,7 +399,7 @@
     },
     {
       "path": "assets/heritage/cinagroup-wordmark-white-544.png",
-      "sha256": "77db61becf9d9254a15ca6070c1ecdf8cc866e69fa2ab1dddf7bff53dd63cf6e",
+      "sha256": "e47a7048f371cbd8311cf63fb31190573bd25587c5d841d1acd080c527141684",
       "format": "png",
       "width": 544,
       "height": 240,
@@ -618,7 +625,7 @@
     },
     {
       "path": "assets/heritage/preview.png",
-      "sha256": "9aa41162ce7291cc7704c390857530bff2756ee7dd49f7c3b83e8ab6533c3ea4",
+      "sha256": "5e8a6c18c356b3b94372d986387d4d0abe40f61a67eaeabda2cabea262ca0d9b",
       "format": "png",
       "width": 1600,
       "height": 1600,

@@ -179,12 +179,12 @@ for (const [size, x] of [[192, 866], [128, 1134], [64, 1342], [32, 1462]]) {
   sheet += image(await icon(size, true), x, 1400 - size, size, size);
   sheet += label(`${size}px`, x, 1440, 20);
 }
-sheet += label('传承中文 + Geist Regular · 英文圆角半径为主笔画宽度的 50% · 底板圆角 4.6875%', 48, 1575, 20);
+sheet += label('传承中文 + Geist Regular · 英文圆角 50%，N 上下内角保留锐角 · 底板圆角 4.6875%', 48, 1575, 20);
 sheet += '</svg>';
 await savePng('assets/heritage/preview.png', await sharp(Buffer.from(sheet)).png(png).toBuffer(), { role: 'preview' });
 
 const manifest = {
-  schemaVersion: 1, version: '2.1.0', name: '海内集团 · 传承字标 + Geist', englishWordmark: 'CINAGROUP',
+  schemaVersion: 1, version: '2.1.1', name: '海内集团 · 传承字标 + Geist', englishWordmark: 'CINAGROUP',
   source: { path: sourcePath, sha256: sourceHash, width: 3238, height: 1024, symbolRect: { left: 0, top: 0, width: 1024, height: 1024 }, chineseRect },
   typography: { english: geist.metadata },
   rules: { shape: 'unchanged-source-raster', lettering: 'original Chinese glyphs; custom rounded Geist Regular English outlines', bilingualAlignment: 'equal-width-left-and-right', cornerRadiusRatio, cornerRadiusReference: { sizePx: 256, radiusPx: 12 }, svg: 'self-contained hybrid SVG: original symbol and Chinese PNGs, vector English paths', platformIcons: 'square artwork; OS applies its own mask' },

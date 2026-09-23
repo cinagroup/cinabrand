@@ -1,6 +1,6 @@
 # 海内集团 CinaGroup Brand
 
-海内集团官方通用品牌资产仓库。当前集团标准为 **v2.1.0 传承中文 + Geist 英文**：保留原始左侧图案、蓝色渐变与中文字形，英文 CINAGROUP 使用 **Geist Regular** 轮廓，尖角采用主笔画宽度 **50%** 的圆角半径。中英双行组合等宽、左右对齐，蓝色底板采用边长 **4.6875%** 的等比例圆角。
+海内集团官方通用品牌资产仓库。当前集团标准为 **v2.1.1 传承中文 + Geist 英文**：保留原始左侧图案、蓝色渐变与中文字形，英文 CINAGROUP 使用 **Geist Regular** 轮廓，尖角采用主笔画宽度 **50%** 的圆角半径，**N 字上下内侧的两处锐角保留原状**。中英双行组合等宽、左右对齐，蓝色底板采用边长 **4.6875%** 的等比例圆角。
 
 ![海内集团传承字标套件](assets/heritage/preview.png)
 
@@ -32,10 +32,10 @@
 ## 固定版本引用
 
 ```html
-<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.0/assets/heritage/cinagroup-horizontal-832.png"
+<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.1/assets/heritage/cinagroup-horizontal-832.png"
      width="832" height="288" alt="海内集团 CINAGROUP">
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.0/assets/icons/web/favicon.ico">
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.0/assets/icons/web/apple-touch-icon.png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.1/assets/icons/web/favicon.ico">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.1/assets/icons/web/apple-touch-icon.png">
 ```
 
 圆角随图形整体缩放，保持相同视觉比例。网页使用独立方形原图时，对正方形容器设置 `border-radius: 4.6875%; overflow: hidden;`；不要对整张组合 Logo 再做裁切。生产项目建议固定版本并在构建时复制资源；离线应用不在运行时依赖 CDN。

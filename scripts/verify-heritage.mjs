@@ -19,9 +19,14 @@ assert.deepEqual(manifest.typography.english, geist.metadata);
 assert.deepEqual(brand.typography.english, {
   family: 'Geist', style: 'Regular', weight: 400, cornerRadiusRatio: 0.5,
   referenceStroke: 'uppercase I vertical stem',
+  sharpCornerExceptions: ['N upper and lower inner acute joins'],
 });
 assert.equal(geist.metadata.strokeWidthUnits, 86);
 assert.equal(geist.metadata.cornerRadiusUnits, 43);
+assert.deepEqual(geist.preservedCorners, [[1133, -612], [1520, -86]], 'N must preserve its original upper and lower inner vertices');
+for (const [x, y] of geist.preservedCorners) {
+  assert(geist.path.includes(`L${x} ${y}L`), 'N acute vertex must connect two straight segments without an arc');
+}
 assert(geist.metrics.length > 0, 'English corners must actually be rounded');
 for (const corner of geist.metrics) {
   assert(corner.radius > 0 && corner.radius <= 43);

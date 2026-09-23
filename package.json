@@ -1,6 +1,6 @@
 {
   "name": "@cinagroup/brand",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Versioned CinaGroup and product brand assets, tokens, and metadata.",
   "type": "module",
   "license": "SEE LICENSE IN BRAND_POLICY.md",

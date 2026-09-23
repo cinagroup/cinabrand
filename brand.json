@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "assetVersion": "2.1.0",
+  "assetVersion": "2.1.1",
   "brand": {
     "name": "CinaGroup",
     "chineseName": "海内集团",
@@ -26,7 +26,8 @@
       "style": "Regular",
       "weight": 400,
       "cornerRadiusRatio": 0.5,
-      "referenceStroke": "uppercase I vertical stem"
+      "referenceStroke": "uppercase I vertical stem",
+      "sharpCornerExceptions": ["N upper and lower inner acute joins"]
     }
   },
   "assets": {
@@ -58,7 +59,7 @@
     "cinaseek": "products/cinaseek/brand.json"
   },
   "cdn": {
-    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.0/",
+    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.1.1/",
     "jsdelivrMain": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@main/",
     "rawMain": "https://raw.githubusercontent.com/cinagroup/cinabrand/main/"
   }
