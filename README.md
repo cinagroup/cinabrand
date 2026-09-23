@@ -1,6 +1,6 @@
 # 海内集团 CinaGroup Brand
 
-海内集团官方通用品牌资产仓库。当前集团标准为 **v2.0.0 传承字标**：保留原始左侧图案、蓝色渐变及中英文字形，提供完整组合标志、头像与平台图标。
+海内集团官方通用品牌资产仓库。当前集团标准为 **v2.0.1 传承字标**：保留原始左侧图案、蓝色渐变及中英文字形，中英双行组合等宽、左右对齐，提供完整组合标志、头像与平台图标。
 
 ![海内集团传承字标套件](assets/heritage/preview.png)
 
@@ -30,10 +30,10 @@
 ## 固定版本引用
 
 ```html
-<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.0/assets/heritage/cinagroup-horizontal-832.png"
+<img src="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.1/assets/heritage/cinagroup-horizontal-832.png"
      width="832" height="288" alt="海内集团 CINAGROUP">
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.0/assets/icons/web/favicon.ico">
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.0/assets/icons/web/apple-touch-icon.png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.1/assets/icons/web/favicon.ico">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.1/assets/icons/web/apple-touch-icon.png">
 ```
 
 固定尺寸 PNG 的 3px 圆角在整体缩放时也会缩放。网页需固定 3 CSS px 时使用完整方形原图配合容器圆角，详见规范。生产项目建议固定版本并在构建时复制资源；离线应用不在运行时依赖 CDN。

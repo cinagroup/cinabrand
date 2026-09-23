@@ -76,10 +76,21 @@ for (const asset of manifest.assets) {
         assert.equal(actual[i], ink); assert.equal(actual[i + 1], ink); assert.equal(actual[i + 2], ink);
       }
     }
-    // Ensure all embedded content stays inside the artboard.
-    for (const match of svg.matchAll(/<image x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)"/g)) {
-      const [x, y, width, height] = match.slice(1).map(Number);
+    // Check actual artwork geometry, including equal-width bilingual rows.
+    const boxes = [...svg.matchAll(/<image x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)"/g)]
+      .map(match => match.slice(1).map(Number));
+    for (const [x, y, width, height] of boxes) {
       assert(x + width <= asset.width && y + height <= asset.height, `Clipped artwork in ${asset.path}`);
+    }
+    if (/cinagroup-(horizontal|stacked|wordmark)(-white)?\.svg$/.test(asset.path)) {
+      const [chineseBox, englishBox] = boxes.slice(-2);
+      assert.equal(chineseBox[0], englishBox[0], `Bilingual left edges differ: ${asset.path}`);
+      assert.equal(chineseBox[2], englishBox[2], `Bilingual widths differ: ${asset.path}`);
+      for (const [index, box] of [chineseBox, englishBox].entries()) {
+        const meta = glyphs[index].meta;
+        assert(Math.abs(box[2] / box[3] - meta.width / meta.height) < 1e-8, `Distorted wordmark: ${asset.path}`);
+      }
+      assert(englishBox[1] > chineseBox[1] + chineseBox[3], `Overlapping wordmarks: ${asset.path}`);
     }
   }
   if (asset.format === 'ico') {
@@ -99,4 +110,4 @@ for (const asset of manifest.assets) {
   }
 }
 for (const size of [16, 24, 32, 48, 64, 96, 128, 180, 192, 256, 512, 1024]) assert(seen.has(`assets/icons/rounded/cinagroup-${size}.png`));
-console.log(`Verified ${seen.size} heritage exports: original symbol pixels, embedded lettering, 3px corners, SVG bounds and ICO payloads.`);
+console.log(`Verified ${seen.size} heritage exports: original symbol pixels, embedded lettering, equal bilingual widths, 3px corners, SVG bounds and ICO payloads.`);

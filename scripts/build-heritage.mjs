@@ -56,11 +56,19 @@ const uri = data => `data:image/png;base64,${data.toString('base64')}`;
 const header = (width, height) => `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><title>海内集团 CINAGROUP</title>`;
 const image = (buffer, x, y, width, height, attrs = '') => `<image x="${x}" y="${y}" width="${width}" height="${height}" xlink:href="${uri(buffer)}" ${attrs}/>`;
 
+// Scale each complete original wordmark proportionally to the same visible
+// width. Match both endpoints without horizontally stretching any glyph.
+const bilingual = (x, y, width, gap = 64) => ({
+  chinese: [x, y, width],
+  english: [x, y + width * cn.height / cn.width + gap, width],
+});
+const centeredTextTop = (height, width, gap = 64) =>
+  (height - width * cn.height / cn.width - gap - width * en.height / en.width) / 2;
 const layouts = {
-  horizontal: { width: 3328, height: 1152, tile: [64, 64, 1024], chinese: [1248, 192, 2016], english: [1248, 760, 1536] },
-  stacked: { width: 1408, height: 1664, tile: [224, 64, 960], chinese: [112, 1112, 1184], english: [224, 1470, 960] },
+  horizontal: { width: 3328, height: 1152, tile: [64, 64, 1024], ...bilingual(1248, centeredTextTop(1152, 2016), 2016) },
+  stacked: { width: 1408, height: 1664, tile: [224, 64, 960], ...bilingual(112, 1112, 1184, 40) },
   english: { width: 3072, height: 1152, tile: [64, 64, 1024], english: [1248, 448, 1760] },
-  wordmark: { width: 2176, height: 960, chinese: [64, 96, 2048], english: [64, 688, 1568] },
+  wordmark: { width: 2176, height: 960, ...bilingual(64, centeredTextTop(960, 2048), 2048) },
 };
 function lockup(name, width, reversed = false) {
   const layout = layouts[name];
@@ -158,9 +166,9 @@ sheet += '</svg>';
 await savePng('assets/heritage/preview.png', await sharp(Buffer.from(sheet)).png(png).toBuffer(), { role: 'preview' });
 
 const manifest = {
-  schemaVersion: 1, version: '2.0.0', name: '海内集团 · 传承字标', englishWordmark: 'CINAGROUP',
+  schemaVersion: 1, version: '2.0.1', name: '海内集团 · 传承字标', englishWordmark: 'CINAGROUP',
   source: { path: sourcePath, sha256: sourceHash, width: 3238, height: 1024, symbolRect: { left: 0, top: 0, width: 1024, height: 1024 }, chineseRect, englishRect },
-  rules: { shape: 'unchanged-source-raster', lettering: 'extracted-original-glyphs', cornerRadiusPx: 3, svg: 'self-contained SVG with embedded PNG artwork; not traced vector paths', platformIcons: 'square artwork; OS applies its own mask' },
+  rules: { shape: 'unchanged-source-raster', lettering: 'extracted-original-glyphs', bilingualAlignment: 'equal-width-left-and-right', cornerRadiusPx: 3, svg: 'self-contained SVG with embedded PNG artwork; not traced vector paths', platformIcons: 'square artwork; OS applies its own mask' },
   assets: records,
 };
 await writeFile(resolve(root, 'assets/heritage/manifest.json'), JSON.stringify(manifest, null, 2) + '\n');

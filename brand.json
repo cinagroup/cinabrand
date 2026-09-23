@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "assetVersion": "2.0.0",
+  "assetVersion": "2.0.1",
   "brand": {
     "name": "CinaGroup",
     "chineseName": "海内集团",
@@ -46,7 +46,7 @@
     "cinaseek": "products/cinaseek/brand.json"
   },
   "cdn": {
-    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.0/",
+    "jsdelivrRelease": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@v2.0.1/",
     "jsdelivrMain": "https://cdn.jsdelivr.net/gh/cinagroup/cinabrand@main/",
     "rawMain": "https://raw.githubusercontent.com/cinagroup/cinabrand/main/"
   }
