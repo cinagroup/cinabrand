@@ -98,6 +98,48 @@
       "embeddedRaster": false
     },
     {
+      "path": "assets/heritage/cinagroup-wordmark-zh.svg",
+      "sha256": "52e66b2a998222d378ccec9dbc2f518f116815d00354ed2679275f289a030f2f",
+      "format": "svg",
+      "width": 2027,
+      "height": 493,
+      "embeddedRaster": true,
+      "role": "original-chinese-lettering"
+    },
+    {
+      "path": "assets/heritage/cinagroup-wordmark-zh-512.png",
+      "sha256": "b47bf98b13c50d8d5fc23241787ea9b65c0e01be1e2f64ca5b54a1b44240b8c1",
+      "format": "png",
+      "width": 512,
+      "height": 125,
+      "role": "original-chinese-lettering"
+    },
+    {
+      "path": "assets/heritage/cinagroup-wordmark-zh-white.png",
+      "sha256": "1772185f7af9ee2b10ff947b44e1cdf3e159b0d06ba220f19bc6dc5369ece199",
+      "format": "png",
+      "width": 2027,
+      "height": 493,
+      "role": "original-chinese-lettering"
+    },
+    {
+      "path": "assets/heritage/cinagroup-wordmark-zh-white.svg",
+      "sha256": "7b40df91c595543eeaa7a5d8f1f7fedf24bf50e738eafdd5fc3d00b4e30f7e8c",
+      "format": "svg",
+      "width": 2027,
+      "height": 493,
+      "embeddedRaster": true,
+      "role": "original-chinese-lettering"
+    },
+    {
+      "path": "assets/heritage/cinagroup-wordmark-zh-white-512.png",
+      "sha256": "9aa46a92d24f63d7a7ddba94d23af47d54ec90a55ce027f486124e36068d3e26",
+      "format": "png",
+      "width": 512,
+      "height": 125,
+      "role": "original-chinese-lettering"
+    },
+    {
       "path": "assets/heritage/cinagroup-horizontal.svg",
       "sha256": "e6e8684485535091e87b0ed6093d6ce0a4d8bea6efd47824afc74d0ac853da54",
       "format": "svg",
@@ -406,6 +448,178 @@
       "cornerRadiusPx": null
     },
     {
+      "path": "assets/heritage/cinagroup-chinese.svg",
+      "sha256": "bc58a878eaa49270f280275727a405b14d684a0524747bf2453bd7629b2df2c6",
+      "format": "svg",
+      "width": 3328,
+      "height": 1152,
+      "embeddedRaster": true,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese.png",
+      "sha256": "f19f96eee5eb5c519490b5f2c3dbdc6bc413be040030c4db2c94f054bd3a6dcf",
+      "format": "png",
+      "width": 3328,
+      "height": 1152,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-832.png",
+      "sha256": "ddadbf4a65884796b5a7b91db96434d0ab2ee20aaaad774beb45cae9529aa8f0",
+      "format": "png",
+      "width": 832,
+      "height": 288,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-white.svg",
+      "sha256": "b9f0571d25995f6e7588e326cab5d693a8de8c2d1be0134a35374b545c0f0617",
+      "format": "svg",
+      "width": 3328,
+      "height": 1152,
+      "embeddedRaster": true,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-white.png",
+      "sha256": "73eb07185d0852b041f89d7b1c073995258313bb49ba75b5d4e7acb7fcfd6c64",
+      "format": "png",
+      "width": 3328,
+      "height": 1152,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-white-832.png",
+      "sha256": "02899798aac22efd1aece7a6924aff85961ae41035c1388b5d801a8b60656a77",
+      "format": "png",
+      "width": 832,
+      "height": 288,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-stacked.svg",
+      "sha256": "8f164a99edde45d60c54ea5b12285f6ccde45efb0d5b6de90f8512cbb17fd86f",
+      "format": "svg",
+      "width": 1408,
+      "height": 1472,
+      "embeddedRaster": true,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-stacked.png",
+      "sha256": "3a5d8e27a7fc0fc5bd4c52cdea75018fd377b77046345400cdd31be795046dd0",
+      "format": "png",
+      "width": 1408,
+      "height": 1472,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-stacked-352.png",
+      "sha256": "0d0508df519d149659ed4f27c0d5ec5adecdce9a1011b06074d032e301ad81f5",
+      "format": "png",
+      "width": 352,
+      "height": 368,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-stacked-white.svg",
+      "sha256": "9cea7595786781fae09dfda567eb4567934f6330a1f41859e3e3afbe8b527dbf",
+      "format": "svg",
+      "width": 1408,
+      "height": 1472,
+      "embeddedRaster": true,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-stacked-white.png",
+      "sha256": "15defaf7d6ccfdebde6d1f3ab7a29d5b93d8af50e8939a14b337f81a6ddf54ce",
+      "format": "png",
+      "width": 1408,
+      "height": 1472,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      }
+    },
+    {
+      "path": "assets/heritage/cinagroup-chinese-stacked-white-352.png",
+      "sha256": "97b7bc3a8e81761f262b2fa1d8a16c5d050eaa3d3c48e4bd4dee8c3ef7a3c80e",
+      "format": "png",
+      "width": 352,
+      "height": 368,
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      }
+    },
+    {
       "path": "assets/icons/rounded/cinagroup-16.png",
       "sha256": "466edea4352302f98c6b465ff3079c10d89bfedd2808e0133ef5e69ee2723865",
       "format": "png",
@@ -625,7 +839,15 @@
     },
     {
       "path": "assets/heritage/preview.png",
-      "sha256": "5e8a6c18c356b3b94372d986387d4d0abe40f61a67eaeabda2cabea262ca0d9b",
+      "sha256": "5c5f40c1b55dd410527cae1fc2411e1248419f8f44024fe75445083bffa9c2ed",
+      "format": "png",
+      "width": 1600,
+      "height": 1600,
+      "role": "preview"
+    },
+    {
+      "path": "assets/heritage/preview-chinese.png",
+      "sha256": "6d3eb758fc40e19d1d118fae2ac6345af07efa90e09a3673944b154f40c5eac0",
       "format": "png",
       "width": 1600,
       "height": 1600,

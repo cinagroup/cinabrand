@@ -13,11 +13,57 @@
 | 英文组合 | [下载](assets/heritage/cinagroup-english.png) | [下载](assets/heritage/cinagroup-english.svg) | 3072 × 1152 |
 | 纯字标组合 | [下载](assets/heritage/cinagroup-wordmark.png) | [下载](assets/heritage/cinagroup-wordmark.svg) | 2176 × 960 |
 
-每种组合还提供 `-white` 文字反白版本，以及四分之一宽度的 PNG，例如 [`cinagroup-horizontal-832.png`](assets/heritage/cinagroup-horizontal-832.png)。全部组合保留左侧全彩原图；反白版本仅改变文字颜色。组合 SVG 自包含图形和中文位图，英文采用矢量路径；**整张组合不是纯矢量稿**，显示时不依赖本机字体。
+每种组合还提供 `-white` 文字反白版本，以及四分之一宽度的 PNG，例如 [`cinagroup-horizontal-832.png`](assets/heritage/cinagroup-horizontal-832.png)。含图标的组合保留左侧全彩原图；反白版本仅改变文字颜色。组合 SVG 自包含图形和中文位图，英文采用矢量路径；**整张组合不是纯矢量稿**，显示时不依赖本机字体。
 
 独立素材：[左侧原图](assets/heritage/cinagroup-symbol-source.png)、[中文原字标](assets/heritage/cinagroup-wordmark-zh.png)、[Geist 圆角英文 PNG](assets/heritage/cinagroup-wordmark-en.png)、[英文纯矢量 SVG](assets/heritage/cinagroup-wordmark-en.svg)。完整文件、尺寸与校验值见 [套件清单](assets/heritage/manifest.json)。
 
 英文采用官方 Geist v1.7.2 的 Regular（400）字重；以大写 I 的 86 字体单位笔画为基准，圆角半径为 43 单位。狭窄接点局部缩小半径，避免相邻圆角重叠。字体、来源校验值与 OFL 许可证保存在 [字体源目录](sources/fonts/geist/README.md)。
+
+## 图标 + 中文套件
+
+保留核准的全彩图标与“海内集团”原中文字形，提供不含英文的横版、竖版组合，以及可单独使用的中文字标。深色背景使用文字反白版本，图标仍保持原始全彩。
+
+![海内集团图标与中文套件](assets/heritage/preview-chinese.png)
+
+| 组合 | 黑字 PNG / SVG | 反白 PNG / SVG | 原生尺寸 | 小尺寸 PNG（黑字 / 反白） |
+| --- | --- | --- | --- | --- |
+| 横版图标 + 中文 | [PNG](assets/heritage/cinagroup-chinese.png) / [SVG](assets/heritage/cinagroup-chinese.svg) | [PNG](assets/heritage/cinagroup-chinese-white.png) / [SVG](assets/heritage/cinagroup-chinese-white.svg) | 3328 × 1152 | [832 × 288](assets/heritage/cinagroup-chinese-832.png) / [反白](assets/heritage/cinagroup-chinese-white-832.png) |
+| 竖版图标 + 中文 | [PNG](assets/heritage/cinagroup-chinese-stacked.png) / [SVG](assets/heritage/cinagroup-chinese-stacked.svg) | [PNG](assets/heritage/cinagroup-chinese-stacked-white.png) / [SVG](assets/heritage/cinagroup-chinese-stacked-white.svg) | 1408 × 1472 | [352 × 368](assets/heritage/cinagroup-chinese-stacked-352.png) / [反白](assets/heritage/cinagroup-chinese-stacked-white-352.png) |
+
+| 独立中文字标 | PNG | SVG | 512px PNG |
+| --- | --- | --- | --- |
+| 黑字 | [2027 × 493](assets/heritage/cinagroup-wordmark-zh.png) | [下载](assets/heritage/cinagroup-wordmark-zh.svg) | [512 × 125](assets/heritage/cinagroup-wordmark-zh-512.png) |
+| 反白 | [2027 × 493](assets/heritage/cinagroup-wordmark-zh-white.png) | [下载](assets/heritage/cinagroup-wordmark-zh-white.svg) | [512 × 125](assets/heritage/cinagroup-wordmark-zh-white-512.png) |
+
+中文 SVG 内嵌原稿提取的透明 PNG，保留原字形，不含英文字标，也不依赖字体；它是自包含的位图封装，**不是中文矢量轮廓**。独立中文字标不含图标。PNG 均使用透明背景，所有文字按原比例缩放。
+
+本次新增文件先使用本地路径；合并后可使用 `main` 路径。现有 `v2.1.1` 固定版本示例对应已发布资产，新增文件须待后续标签发布后再固定版本引用。
+
+## 海内 · 商品字标套件
+
+“海内”直接取自原中文字标的前两字，保留原字形，并与核准的全彩图标组合。提供基础版与带注册标记的 `-registered` 版：注册组合的图标与文字各有一处 ®，独立图标和独立字标各有一处 ®。
+
+![海内商品字标套件](assets/hainei/preview.png)
+
+| 版式 | 原生尺寸 | 基础版 PNG / SVG | 基础反白 PNG / SVG | ® 版 PNG / SVG | ® 反白 PNG / SVG |
+| --- | --- | --- | --- | --- | --- |
+| 横版图标 + 海内 | 2432 × 1152 | [PNG](assets/hainei/hainei-horizontal.png) / [SVG](assets/hainei/hainei-horizontal.svg) | [PNG](assets/hainei/hainei-horizontal-white.png) / [SVG](assets/hainei/hainei-horizontal-white.svg) | [PNG](assets/hainei/hainei-horizontal-registered.png) / [SVG](assets/hainei/hainei-horizontal-registered.svg) | [PNG](assets/hainei/hainei-horizontal-registered-white.png) / [SVG](assets/hainei/hainei-horizontal-registered-white.svg) |
+| 竖版图标 + 海内 | 1408 × 1792 | [PNG](assets/hainei/hainei-stacked.png) / [SVG](assets/hainei/hainei-stacked.svg) | [PNG](assets/hainei/hainei-stacked-white.png) / [SVG](assets/hainei/hainei-stacked-white.svg) | [PNG](assets/hainei/hainei-stacked-registered.png) / [SVG](assets/hainei/hainei-stacked-registered.svg) | [PNG](assets/hainei/hainei-stacked-registered-white.png) / [SVG](assets/hainei/hainei-stacked-registered-white.svg) |
+| 独立海内字标 | 1216 × 640 | [PNG](assets/hainei/hainei-wordmark.png) / [SVG](assets/hainei/hainei-wordmark.svg) | [PNG](assets/hainei/hainei-wordmark-white.png) / [SVG](assets/hainei/hainei-wordmark-white.svg) | [PNG](assets/hainei/hainei-wordmark-registered.png) / [SVG](assets/hainei/hainei-wordmark-registered.svg) | [PNG](assets/hainei/hainei-wordmark-registered-white.png) / [SVG](assets/hainei/hainei-wordmark-registered-white.svg) |
+| 独立全彩图标 | 1280 × 1280 | [PNG](assets/hainei/hainei-symbol.png) / [SVG](assets/hainei/hainei-symbol.svg) | — | [PNG](assets/hainei/hainei-symbol-registered.png) / [SVG](assets/hainei/hainei-symbol-registered.svg) | [PNG](assets/hainei/hainei-symbol-registered-white.png) / [SVG](assets/hainei/hainei-symbol-registered-white.svg) |
+
+各版式另有四分之一宽度的透明 PNG，注册版可直接下载：
+
+| 版式 | 黑字 / 黑色 ® | 反白文字 / 白色 ® |
+| --- | --- | --- |
+| 横版 · 608 × 288 | [下载](assets/hainei/hainei-horizontal-registered-608.png) | [下载](assets/hainei/hainei-horizontal-registered-white-608.png) |
+| 竖版 · 352 × 448 | [下载](assets/hainei/hainei-stacked-registered-352.png) | [下载](assets/hainei/hainei-stacked-registered-white-352.png) |
+| 独立字标 · 304 × 160 | [下载](assets/hainei/hainei-wordmark-registered-304.png) | [下载](assets/hainei/hainei-wordmark-registered-white-304.png) |
+| 独立图标 · 320 × 320 | [下载](assets/hainei/hainei-symbol-registered-320.png) | [下载](assets/hainei/hainei-symbol-registered-white-320.png) |
+
+反白版仅将文字和 ® 改为白色，全彩图标保持原样；独立图标反白版只改变 ® 的颜色。® 使用固定版本 Geist 的矢量轮廓，不依赖字体。SVG 内嵌原图标与“海内”位图，**不是完整的纯矢量稿**。
+
+商品包装、吊牌和标签使用时保留完整画布及右上方 ® 的留白，不裁到图标或文字边缘。原字形裁片见 [981 × 493px 原稿](assets/hainei/hainei-wordmark-source.png)，完整文件、布局及校验值见 [海内套件清单](assets/hainei/manifest.json)。新增海内文件先使用本地路径，合并后可使用 `main`；现有 `v2.1.1` 标签与 CDN 示例不变，新增资产待后续标签发布后再固定版本引用。
 
 ## 独立图标
 
@@ -48,6 +94,7 @@
 - [核准原稿](sources/heritage/cinagroup_20251026.png)：从用户提供的无损 PNG 保留。
 - [生成脚本](scripts/build-heritage.mjs)：从核准图形、中文原稿和固定版本 Geist 字体生成资产。
 - [英文轮廓生成器](scripts/geist-wordmark.mjs)：保留字距，以相切圆弧处理英文尖角。
+- [海内套件生成器](scripts/build-hainei.mjs)：提取“海内”原字形，排版独立的图标、文字与 ®。
 - [CinaSeek 产品契约](products/cinaseek/brand.json)、[术语映射](products/cinaseek/terminology.json)、[界面 Token](products/cinaseek/tokens.css)。
 
 ```bash
