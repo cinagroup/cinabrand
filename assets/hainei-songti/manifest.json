@@ -1,0 +1,1276 @@
+{
+  "schemaVersion": 1,
+  "version": "2.1.1",
+  "name": "海内 · 宋体商品字标套件",
+  "wordmark": "海内",
+  "source": {
+    "path": "sources/fonts/source-han-serif/SourceHanSerifSC-Regular.otf",
+    "sha256": "78aa7a328fd974df2d688c8a9fd74a33d8334dfa84ab24d9d11efb2ffc464117",
+    "text": "海内",
+    "viewBox": "37 -837 1902 916"
+  },
+  "typography": {
+    "chinese": {
+      "family": "Source Han Serif SC",
+      "chineseFamily": "思源宋体",
+      "style": "Regular",
+      "weight": 400,
+      "release": "2.003",
+      "path": "sources/fonts/source-han-serif/SourceHanSerifSC-Regular.otf",
+      "sha256": "78aa7a328fd974df2d688c8a9fd74a33d8334dfa84ab24d9d11efb2ffc464117",
+      "url": "https://github.com/adobe-fonts/source-han-serif/releases/tag/2.003R",
+      "downloadUrl": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/2.003R/OTF/SimplifiedChinese/SourceHanSerifSC-Regular.otf",
+      "gitBlobSha": "cb41635674be23029e98469f729eded6ebc54611",
+      "license": "SIL Open Font License 1.1",
+      "licensePath": "sources/fonts/source-han-serif/OFL.txt",
+      "text": "海内",
+      "unitsPerEm": 1000,
+      "kerning": true,
+      "glyphIndices": [
+        23386,
+        10949
+      ],
+      "outlines": "unmodified-font-paths"
+    }
+  },
+  "registration": {
+    "symbol": "®",
+    "font": {
+      "family": "Geist",
+      "style": "Regular",
+      "weight": 400,
+      "release": "1.7.2",
+      "path": "sources/fonts/geist/Geist-Regular.otf",
+      "sha256": "16cb657f0dde448dccfe57cbe39a5b59c03cb709922a3451914495c273359f51",
+      "url": "https://github.com/vercel/geist-font/releases/tag/v1.7.2",
+      "license": "SIL Open Font License 1.1",
+      "licensePath": "sources/fonts/geist/OFL.txt"
+    },
+    "viewBox": "45 -726 545 547",
+    "placement": "upper-right-outside-artwork"
+  },
+  "assets": [
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-source.png",
+      "sha256": "214ae83761617f7b6f6f99ba4995864829881417345491557f1dd971ee373c63",
+      "format": "png",
+      "width": 1902,
+      "height": 916,
+      "role": "songti-lettering"
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-source.svg",
+      "sha256": "10e4d46d0389b9a75aace8260292ba8b7465e9fdcc959ff93cdfbc88fa91d6e7",
+      "format": "svg",
+      "width": 1902,
+      "height": 916,
+      "role": "songti-lettering",
+      "embeddedRaster": false
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal.svg",
+      "sha256": "4293b522109b3fccfd2047dcb973e80be1ec99d249d7d756d4abf5b20cabcf77",
+      "format": "svg",
+      "width": 2432,
+      "height": 1152,
+      "embeddedRaster": true,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 339.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal.png",
+      "sha256": "22d035e543e18c8078c0ada0498ebec8261c35dbc232b61c54510d06636f9a34",
+      "format": "png",
+      "width": 2432,
+      "height": 1152,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 339.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-608.png",
+      "sha256": "c77e0121e78d68e1726e3dc61da4d55f36d4711f9094c5253d91ea2bf0d7c692",
+      "format": "png",
+      "width": 608,
+      "height": 288,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "letteringFrame": {
+        "x": 328,
+        "y": 84.94400630914826,
+        "width": 245.25,
+        "height": 118.11198738170347
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-white.svg",
+      "sha256": "7d11d8eb18ecdf3d1b21cfb5a0285c6cd4a5106dc4570c7f61f93b2b5b4173e3",
+      "format": "svg",
+      "width": 2432,
+      "height": 1152,
+      "embeddedRaster": true,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 339.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-white.png",
+      "sha256": "33f12a385ee7ae1555aec7505214712438c3cf9c2f67aa98bb9a6385b0531552",
+      "format": "png",
+      "width": 2432,
+      "height": 1152,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 339.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-white-608.png",
+      "sha256": "a7408f6db8e18f3d6e91d459745637b846fc45bf4d8f9da5b8837fec42d20c1e",
+      "format": "png",
+      "width": 608,
+      "height": 288,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "letteringFrame": {
+        "x": 328,
+        "y": 84.94400630914826,
+        "width": 245.25,
+        "height": 118.11198738170347
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-registered.svg",
+      "sha256": "9bf6341a74a57005294c311109e69a867a560829520f08a96d354f113dc1fb6c",
+      "format": "svg",
+      "width": 2432,
+      "height": 1152,
+      "embeddedRaster": true,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1104,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 2309,
+          "y": 307.77602523659306,
+          "size": 64
+        }
+      ],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 339.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-registered.png",
+      "sha256": "6f6ad0db21df83d84aea5d16a2d6bccc9fdd2751376e34ad7014d46e8d6dc531",
+      "format": "png",
+      "width": 2432,
+      "height": 1152,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1104,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 2309,
+          "y": 307.77602523659306,
+          "size": 64
+        }
+      ],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 339.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-registered-608.png",
+      "sha256": "699460a195075c7363b7f2b81d8049acf4872828362229d8951641a32b0fb306",
+      "format": "png",
+      "width": 608,
+      "height": 288,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 276,
+          "y": 16,
+          "size": 20
+        },
+        {
+          "owner": "lettering",
+          "x": 577.25,
+          "y": 76.94400630914826,
+          "size": 16
+        }
+      ],
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "letteringFrame": {
+        "x": 328,
+        "y": 84.94400630914826,
+        "width": 245.25,
+        "height": 118.11198738170347
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-registered-white.svg",
+      "sha256": "c2e7bf6247cf340d4dec25f59a4edcd22f3fdac0e61ee581fea2c7de584e909f",
+      "format": "svg",
+      "width": 2432,
+      "height": 1152,
+      "embeddedRaster": true,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1104,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 2309,
+          "y": 307.77602523659306,
+          "size": 64
+        }
+      ],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 339.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-registered-white.png",
+      "sha256": "28fc6e5b07fa620b67f8a5fdd812328647a037ce175e150adb1fbb9862290cf7",
+      "format": "png",
+      "width": 2432,
+      "height": 1152,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1104,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 2309,
+          "y": 307.77602523659306,
+          "size": 64
+        }
+      ],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 339.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-horizontal-registered-white-608.png",
+      "sha256": "1397609420836b31ec216129bcdab6fa67452d6c0d31482ea8751c6f42892e7e",
+      "format": "png",
+      "width": 608,
+      "height": 288,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 276,
+          "y": 16,
+          "size": 20
+        },
+        {
+          "owner": "lettering",
+          "x": 577.25,
+          "y": 76.94400630914826,
+          "size": 16
+        }
+      ],
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "letteringFrame": {
+        "x": 328,
+        "y": 84.94400630914826,
+        "width": 245.25,
+        "height": 118.11198738170347
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked.svg",
+      "sha256": "9a4786fae800ea4d8245af6176ae365e813ac60c045454599150995a28fd88c6",
+      "format": "svg",
+      "width": 1408,
+      "height": 1792,
+      "embeddedRaster": true,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 570.2124079915878
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked.png",
+      "sha256": "cc2df3f62f7f845b5dada08540fc653b19864348355147023506ce1d5f30fd0b",
+      "format": "png",
+      "width": 1408,
+      "height": 1792,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 570.2124079915878
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-352.png",
+      "sha256": "620ec974ec25e3a47607ab587aefd37900b6f1a4482d076881dbd808e22d1529",
+      "format": "png",
+      "width": 352,
+      "height": 448,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "letteringFrame": {
+        "x": 28,
+        "y": 278,
+        "width": 296,
+        "height": 142.55310199789696
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-white.svg",
+      "sha256": "35d880f02f3317a953334a7091ed2a20e93d7e6f76c6b3adfa79e0684e0e71cb",
+      "format": "svg",
+      "width": 1408,
+      "height": 1792,
+      "embeddedRaster": true,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 570.2124079915878
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-white.png",
+      "sha256": "d73c97c6b515d5ea5c82c9112965281bb49c6f485816c3e3dd88f5e91342db58",
+      "format": "png",
+      "width": 1408,
+      "height": 1792,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 570.2124079915878
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-white-352.png",
+      "sha256": "fe59e2a72d97061ca849232248ace8dfcb41ea00f2e0c047618ce27cca8c79e8",
+      "format": "png",
+      "width": 352,
+      "height": 448,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "letteringFrame": {
+        "x": 28,
+        "y": 278,
+        "width": 296,
+        "height": 142.55310199789696
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-registered.svg",
+      "sha256": "3a67855e3993aa74bfb5b992379c36cd743c5ab3e292e8dcef96d054e0cc46d2",
+      "format": "svg",
+      "width": 1408,
+      "height": 1792,
+      "embeddedRaster": true,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1200,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 1312,
+          "y": 1084,
+          "size": 56
+        }
+      ],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 570.2124079915878
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-registered.png",
+      "sha256": "6471a14878b4fe11ead27b44f80858640a05e2552df20158d5e6f39120aacad4",
+      "format": "png",
+      "width": 1408,
+      "height": 1792,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1200,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 1312,
+          "y": 1084,
+          "size": 56
+        }
+      ],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 570.2124079915878
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-registered-352.png",
+      "sha256": "6029e987c7ba6708aa9c70a439de489209407c11c1813067326c2aca3d9a0b6d",
+      "format": "png",
+      "width": 352,
+      "height": 448,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 300,
+          "y": 16,
+          "size": 20
+        },
+        {
+          "owner": "lettering",
+          "x": 328,
+          "y": 271,
+          "size": 14
+        }
+      ],
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "letteringFrame": {
+        "x": 28,
+        "y": 278,
+        "width": 296,
+        "height": 142.55310199789696
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-registered-white.svg",
+      "sha256": "6bc42e8700014dd51e131132163cea47abdbd9ee9507a92f33098454a1831286",
+      "format": "svg",
+      "width": 1408,
+      "height": 1792,
+      "embeddedRaster": true,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1200,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 1312,
+          "y": 1084,
+          "size": 56
+        }
+      ],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 570.2124079915878
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-registered-white.png",
+      "sha256": "09eec73b0dc852523fd1df0bb0a9e135b6babfa193af69512b7de6522638afba",
+      "format": "png",
+      "width": 1408,
+      "height": 1792,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1200,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 1312,
+          "y": 1084,
+          "size": 56
+        }
+      ],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 570.2124079915878
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-stacked-registered-white-352.png",
+      "sha256": "ee8bec84677058e63e48eca85904f423c2d5dd16c33d96a90da0e84867e849a9",
+      "format": "png",
+      "width": 352,
+      "height": 448,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 300,
+          "y": 16,
+          "size": 20
+        },
+        {
+          "owner": "lettering",
+          "x": 328,
+          "y": 271,
+          "size": 14
+        }
+      ],
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "letteringFrame": {
+        "x": 28,
+        "y": 278,
+        "width": 296,
+        "height": 142.55310199789696
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark.svg",
+      "sha256": "ae2bf0fb8fc1d649369bdc7a69c0735088069d88ef26a45243a3e95fc3768768",
+      "format": "svg",
+      "width": 1216,
+      "height": 640,
+      "embeddedRaster": false,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 64,
+        "y": 83.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark.png",
+      "sha256": "76bd807d04e620de9022d1b122cc53823589ddaca58888f67289bd0bac864b5c",
+      "format": "png",
+      "width": 1216,
+      "height": 640,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 64,
+        "y": 83.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-304.png",
+      "sha256": "abdcc5bfe7c1c93c8b66bab52a0981c87c7d8bbccdf5be5b9d54fa1a9d6e955c",
+      "format": "png",
+      "width": 304,
+      "height": 160,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 16,
+        "y": 20.944006309148264,
+        "width": 245.25,
+        "height": 118.11198738170347
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-white.svg",
+      "sha256": "a6d71c5fe4db001ba7fef9661fbf7319fa5ad1140e40f4ddf646637e3c33cc46",
+      "format": "svg",
+      "width": 1216,
+      "height": 640,
+      "embeddedRaster": false,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 64,
+        "y": 83.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-white.png",
+      "sha256": "a44a3fe163b9f717dbe217fff4070abc238620cee99a69b7f393c91ee0b4cfde",
+      "format": "png",
+      "width": 1216,
+      "height": 640,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 64,
+        "y": 83.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-white-304.png",
+      "sha256": "4a13944679a9e1277b1b5506fa6d06733c346caeb1f681f0320cf4fe5ffa5621",
+      "format": "png",
+      "width": 304,
+      "height": 160,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 16,
+        "y": 20.944006309148264,
+        "width": 245.25,
+        "height": 118.11198738170347
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-registered.svg",
+      "sha256": "0c1ce42b6d2026cbcd2beff29f23f4ea5e53d341916bfaa140f52cc06ea88f67",
+      "format": "svg",
+      "width": 1216,
+      "height": 640,
+      "embeddedRaster": false,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 1061,
+          "y": 51.77602523659306,
+          "size": 64
+        }
+      ],
+      "letteringFrame": {
+        "x": 64,
+        "y": 83.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-registered.png",
+      "sha256": "457a56a8d6df89d3de8b004334c5290133dc40ca54cbeb03cecb3aba03d11e10",
+      "format": "png",
+      "width": 1216,
+      "height": 640,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 1061,
+          "y": 51.77602523659306,
+          "size": 64
+        }
+      ],
+      "letteringFrame": {
+        "x": 64,
+        "y": 83.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-registered-304.png",
+      "sha256": "2b5a7d68038823a0dab41a1e961d4f1701c0d70eb2b465768f5e9caf5b949224",
+      "format": "png",
+      "width": 304,
+      "height": 160,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 265.25,
+          "y": 12.944006309148264,
+          "size": 16
+        }
+      ],
+      "letteringFrame": {
+        "x": 16,
+        "y": 20.944006309148264,
+        "width": 245.25,
+        "height": 118.11198738170347
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-registered-white.svg",
+      "sha256": "199dbf085d31f62ccf900893a28eafb4f3c9a3e894093fc33e32b1929b8135ce",
+      "format": "svg",
+      "width": 1216,
+      "height": 640,
+      "embeddedRaster": false,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 1061,
+          "y": 51.77602523659306,
+          "size": 64
+        }
+      ],
+      "letteringFrame": {
+        "x": 64,
+        "y": 83.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-registered-white.png",
+      "sha256": "0501238c61955d083d1ff5bc941fec6cde5112ea8b522dad1dadd3ddcdfaf84f",
+      "format": "png",
+      "width": 1216,
+      "height": 640,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 1061,
+          "y": 51.77602523659306,
+          "size": 64
+        }
+      ],
+      "letteringFrame": {
+        "x": 64,
+        "y": 83.77602523659306,
+        "width": 981,
+        "height": 472.4479495268139
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-wordmark-registered-white-304.png",
+      "sha256": "6bd4aa512c1a387cd9d46822874ffe75b59838af8fec96ccd0439d1ecde1e6db",
+      "format": "png",
+      "width": 304,
+      "height": 160,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 265.25,
+          "y": 12.944006309148264,
+          "size": 16
+        }
+      ],
+      "letteringFrame": {
+        "x": 16,
+        "y": 20.944006309148264,
+        "width": 245.25,
+        "height": 118.11198738170347
+      }
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol.svg",
+      "sha256": "0eef9f8807b1df15c43cbace0068d1f22ecb939c17745256b0643776c3e481ff",
+      "format": "svg",
+      "width": 1280,
+      "height": 1280,
+      "embeddedRaster": true,
+      "layout": "symbol",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol.png",
+      "sha256": "11f89f33925bd5bf0bd54c28e455356f8c602e8f8ebf15f97d7206df034ae2f7",
+      "format": "png",
+      "width": 1280,
+      "height": 1280,
+      "layout": "symbol",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol-320.png",
+      "sha256": "e49f64dd645d8bdc55368a6750ab10d2cd7b10ae2430beee6ef74855b80d2836",
+      "format": "png",
+      "width": 320,
+      "height": 320,
+      "layout": "symbol",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 32,
+        "y": 32,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol-registered.svg",
+      "sha256": "6cd8af054a072800227d657bb99618dc1248b221b9d91ff70e1b665aa80cd135",
+      "format": "svg",
+      "width": 1280,
+      "height": 1280,
+      "embeddedRaster": true,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1168,
+          "y": 96,
+          "size": 80
+        }
+      ],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol-registered.png",
+      "sha256": "db6818cffe92e5d0cf2a16025ca8915b7a18f499ad1ac9ee9c16c2b5d1d83945",
+      "format": "png",
+      "width": 1280,
+      "height": 1280,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1168,
+          "y": 96,
+          "size": 80
+        }
+      ],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol-registered-320.png",
+      "sha256": "d2f3b1a66ef3dfbca210080c5c77fe8bdb19d8bfe8a9d3b21b70056c3f2809d1",
+      "format": "png",
+      "width": 320,
+      "height": 320,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 292,
+          "y": 24,
+          "size": 20
+        }
+      ],
+      "symbolFrame": {
+        "x": 32,
+        "y": 32,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol-registered-white.svg",
+      "sha256": "574381741fa9f0b54871e436c8143cb06c0773d6563908a0a7f635344143ebdd",
+      "format": "svg",
+      "width": 1280,
+      "height": 1280,
+      "embeddedRaster": true,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1168,
+          "y": 96,
+          "size": 80
+        }
+      ],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol-registered-white.png",
+      "sha256": "1c770b1acbe55cf00e5cbd8f524bea44462697204da6c8b0d953908e3a2768bb",
+      "format": "png",
+      "width": 1280,
+      "height": 1280,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1168,
+          "y": 96,
+          "size": 80
+        }
+      ],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-songti/hainei-songti-symbol-registered-white-320.png",
+      "sha256": "6bc0b1f733977ca9d51f140ee4a4b970adf5b642cd1074691dbd2773ce298fd1",
+      "format": "png",
+      "width": 320,
+      "height": 320,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 292,
+          "y": 24,
+          "size": 20
+        }
+      ],
+      "symbolFrame": {
+        "x": 32,
+        "y": 32,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12
+    },
+    {
+      "path": "assets/hainei-songti/preview.png",
+      "sha256": "3e3156d00ace370c71cd141a23c10e7a65902d2d3bf3b990b9e3fa44a2bad161",
+      "format": "png",
+      "width": 1600,
+      "height": 1920,
+      "role": "preview"
+    }
+  ]
+}

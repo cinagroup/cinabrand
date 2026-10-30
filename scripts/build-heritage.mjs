@@ -5,6 +5,8 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createGeistWordmark } from './geist-wordmark.mjs';
 import { buildHaineiKit } from './build-hainei.mjs';
+import { createFangsongWordmark } from './fangsong-wordmark.mjs';
+import { createSongtiWordmark } from './songti-wordmark.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const sourcePath = 'sources/heritage/cinagroup_20251026.png';
@@ -226,6 +228,10 @@ const manifest = {
 };
 await writeFile(resolve(root, 'assets/heritage/manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 const haineiCount = await buildHaineiKit({ root, mark, chinese, png, cornerRadiusRatio });
+const fangsongWordmark = await createFangsongWordmark(root);
+const fangsongCount = await buildHaineiKit({ root, mark, png, cornerRadiusRatio, vectorWordmark: fangsongWordmark });
+const songtiWordmark = await createSongtiWordmark(root);
+const songtiCount = await buildHaineiKit({ root, mark, png, cornerRadiusRatio, vectorWordmark: songtiWordmark });
 async function walk(folder) {
   const entries = await readdir(resolve(root, folder), { withFileTypes: true });
   const files = await Promise.all(entries.map(entry => entry.isDirectory() ? walk(`${folder}/${entry.name}`) : [`${folder}/${entry.name}`]));
@@ -234,4 +240,4 @@ async function walk(folder) {
 const trackedAssets = (await Promise.all(['assets', 'sources'].map(walk))).flat().sort();
 const checksums = await Promise.all(trackedAssets.map(async path => `${hash(await readFile(resolve(root, path)))}  ${path}`));
 await writeFile(resolve(root, 'checksums.sha256'), checksums.join('\n') + '\n');
-console.log(`Built ${records.length} heritage assets and ${haineiCount} Hainei assets; original source ${sourceHash}; ${trackedAssets.length} checksum entries.`);
+console.log(`Built ${records.length} heritage, ${haineiCount} Hainei, ${fangsongCount} FangSong and ${songtiCount} Songti assets; original source ${sourceHash}; ${trackedAssets.length} checksum entries.`);

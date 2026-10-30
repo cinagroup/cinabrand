@@ -65,6 +65,40 @@
 
 商品包装、吊牌和标签使用时保留完整画布及右上方 ® 的留白，不裁到图标或文字边缘。原字形裁片见 [981 × 493px 原稿](assets/hainei/hainei-wordmark-source.png)，完整文件、布局及校验值见 [海内套件清单](assets/hainei/manifest.json)。新增海内文件先使用本地路径，合并后可使用 `main`；现有 `v2.1.1` 标签与 CDN 示例不变，新增资产待后续标签发布后再固定版本引用。
 
+## 海内 · 仿宋商品字标套件
+
+“海内”使用固定版本 **朱雀仿宋 Regular v0.212** 的原始字形轮廓，图标与文字分别在右上方标注 ®。字体来源、官方归档校验值和 OFL 许可证见[字体说明](sources/fonts/zhuque-fangsong/README.md)。
+
+![海内仿宋商品字标套件](assets/hainei-fangsong/preview.png)
+
+| 版式 | 原生尺寸 | ® 黑字 PNG / SVG | ® 反白 PNG / SVG | 小尺寸 PNG（黑字 / 反白） |
+| --- | --- | --- | --- | --- |
+| 横版图标 + 海内 | 2432 × 1152 | [PNG](assets/hainei-fangsong/hainei-fangsong-horizontal-registered.png) / [SVG](assets/hainei-fangsong/hainei-fangsong-horizontal-registered.svg) | [PNG](assets/hainei-fangsong/hainei-fangsong-horizontal-registered-white.png) / [SVG](assets/hainei-fangsong/hainei-fangsong-horizontal-registered-white.svg) | [608 × 288](assets/hainei-fangsong/hainei-fangsong-horizontal-registered-608.png) / [反白](assets/hainei-fangsong/hainei-fangsong-horizontal-registered-white-608.png) |
+| 竖版图标 + 海内 | 1408 × 1792 | [PNG](assets/hainei-fangsong/hainei-fangsong-stacked-registered.png) / [SVG](assets/hainei-fangsong/hainei-fangsong-stacked-registered.svg) | [PNG](assets/hainei-fangsong/hainei-fangsong-stacked-registered-white.png) / [SVG](assets/hainei-fangsong/hainei-fangsong-stacked-registered-white.svg) | [352 × 448](assets/hainei-fangsong/hainei-fangsong-stacked-registered-352.png) / [反白](assets/hainei-fangsong/hainei-fangsong-stacked-registered-white-352.png) |
+| 独立仿宋字标 | 1216 × 640 | [PNG](assets/hainei-fangsong/hainei-fangsong-wordmark-registered.png) / [纯矢量 SVG](assets/hainei-fangsong/hainei-fangsong-wordmark-registered.svg) | [PNG](assets/hainei-fangsong/hainei-fangsong-wordmark-registered-white.png) / [纯矢量 SVG](assets/hainei-fangsong/hainei-fangsong-wordmark-registered-white.svg) | [304 × 160](assets/hainei-fangsong/hainei-fangsong-wordmark-registered-304.png) / [反白](assets/hainei-fangsong/hainei-fangsong-wordmark-registered-white-304.png) |
+| 独立全彩图标 | 1280 × 1280 | [PNG](assets/hainei-fangsong/hainei-fangsong-symbol-registered.png) / [SVG](assets/hainei-fangsong/hainei-fangsong-symbol-registered.svg) | [PNG](assets/hainei-fangsong/hainei-fangsong-symbol-registered-white.png) / [SVG](assets/hainei-fangsong/hainei-fangsong-symbol-registered-white.svg) | [320 × 320](assets/hainei-fangsong/hainei-fangsong-symbol-registered-320.png) / [反白](assets/hainei-fangsong/hainei-fangsong-symbol-registered-white-320.png) |
+
+同时提供去掉 `-registered` 的基础版（独立图标的基础版只有全彩一款）。横版、竖版的注册版各含两个 ®；独立字标和图标各含一个。反白版将文字及 ® 改为白色，全彩图标保持原色。所有 PNG 均为透明背景，另有[无留白的仿宋文字 SVG](assets/hainei-fangsong/hainei-fangsong-wordmark-source.svg) / [PNG](assets/hainei-fangsong/hainei-fangsong-wordmark-source.png)。
+
+独立仿宋文字 SVG 为纯矢量路径，不依赖系统字体；含图标的 SVG 内嵌原图标位图，整体属于混合素材。商品包装、吊牌和标签使用时保留完整画布及 ® 周围留白，整体等比缩放。完整文件、字体和标记位置见[仿宋套件清单](assets/hainei-fangsong/manifest.json)，包入口为 `@cinagroup/brand/hainei-fangsong`。新增文件先使用本地路径，待发布新标签后再固定版本引用。
+
+## 海内 · 宋体商品字标套件
+
+“海内”使用 Adobe 官方 **思源宋体 SC Regular 2.003** 的简体中文字形轮廓，图标和文字分别在右上方标注 ®。原始字体文件、官方文件指纹及 OFL 许可证见[字体说明](sources/fonts/source-han-serif/README.md)。
+
+![海内宋体商品字标套件](assets/hainei-songti/preview.png)
+
+| 版式 | 原生尺寸 | ® 黑字 PNG / SVG | ® 反白 PNG / SVG | 小尺寸 PNG（黑字 / 反白） |
+| --- | --- | --- | --- | --- |
+| 横版图标 + 海内 | 2432 × 1152 | [PNG](assets/hainei-songti/hainei-songti-horizontal-registered.png) / [SVG](assets/hainei-songti/hainei-songti-horizontal-registered.svg) | [PNG](assets/hainei-songti/hainei-songti-horizontal-registered-white.png) / [SVG](assets/hainei-songti/hainei-songti-horizontal-registered-white.svg) | [608 × 288](assets/hainei-songti/hainei-songti-horizontal-registered-608.png) / [反白](assets/hainei-songti/hainei-songti-horizontal-registered-white-608.png) |
+| 竖版图标 + 海内 | 1408 × 1792 | [PNG](assets/hainei-songti/hainei-songti-stacked-registered.png) / [SVG](assets/hainei-songti/hainei-songti-stacked-registered.svg) | [PNG](assets/hainei-songti/hainei-songti-stacked-registered-white.png) / [SVG](assets/hainei-songti/hainei-songti-stacked-registered-white.svg) | [352 × 448](assets/hainei-songti/hainei-songti-stacked-registered-352.png) / [反白](assets/hainei-songti/hainei-songti-stacked-registered-white-352.png) |
+| 独立宋体字标 | 1216 × 640 | [PNG](assets/hainei-songti/hainei-songti-wordmark-registered.png) / [纯矢量 SVG](assets/hainei-songti/hainei-songti-wordmark-registered.svg) | [PNG](assets/hainei-songti/hainei-songti-wordmark-registered-white.png) / [纯矢量 SVG](assets/hainei-songti/hainei-songti-wordmark-registered-white.svg) | [304 × 160](assets/hainei-songti/hainei-songti-wordmark-registered-304.png) / [反白](assets/hainei-songti/hainei-songti-wordmark-registered-white-304.png) |
+| 独立全彩图标 | 1280 × 1280 | [PNG](assets/hainei-songti/hainei-songti-symbol-registered.png) / [SVG](assets/hainei-songti/hainei-songti-symbol-registered.svg) | [PNG](assets/hainei-songti/hainei-songti-symbol-registered-white.png) / [SVG](assets/hainei-songti/hainei-songti-symbol-registered-white.svg) | [320 × 320](assets/hainei-songti/hainei-songti-symbol-registered-320.png) / [反白](assets/hainei-songti/hainei-songti-symbol-registered-white-320.png) |
+
+横版、竖版注册组合各有两个 ®，独立文字和独立图标各有一个；另提供去掉 `-registered` 的基础版。黑字和反白版本均有透明 PNG、自包含 SVG 与小尺寸 PNG，全彩图标保持原色。无留白的宋体文字可单独下载 [SVG](assets/hainei-songti/hainei-songti-wordmark-source.svg) / [PNG](assets/hainei-songti/hainei-songti-wordmark-source.png)。
+
+独立宋体文字 SVG 是固定矢量轮廓，不依赖系统字体；含图标的 SVG 内嵌原图标位图。商品包装、吊牌和标签使用时保留完整画布及 ® 留白，整体等比缩放。完整文件及字形、标记位置见[宋体套件清单](assets/hainei-songti/manifest.json)，包入口为 `@cinagroup/brand/hainei-songti`。新增文件先使用本地或合并后的 `main` 路径，待发布新标签后再固定版本引用。
+
 ## 独立图标
 
 - **等比例圆角图标**：[`assets/icons/rounded/`](assets/icons/rounded/)，包含 16、24、32、48、64、96、128、180、192、256、512、1024px。圆角半径为边长的 4.6875%，例如 256px 对应 12px、512px 对应 24px、1024px 对应 48px。
@@ -95,6 +129,9 @@
 - [生成脚本](scripts/build-heritage.mjs)：从核准图形、中文原稿和固定版本 Geist 字体生成资产。
 - [英文轮廓生成器](scripts/geist-wordmark.mjs)：保留字距，以相切圆弧处理英文尖角。
 - [海内套件生成器](scripts/build-hainei.mjs)：提取“海内”原字形，排版独立的图标、文字与 ®。
+- [仿宋轮廓生成器](scripts/fangsong-wordmark.mjs)：从固定的朱雀仿宋字体提取“海内”矢量轮廓，并复用海内套件排版。
+- [宋体轮廓生成器](scripts/songti-wordmark.mjs)：从固定的思源宋体 SC 字体提取“海内”矢量轮廓。
+- [字体轮廓公共生成器](scripts/font-wordmark.mjs)：校验字体来源，保留原始字形和字距；宋体与仿宋共用排版与校验流程。
 - [CinaSeek 产品契约](products/cinaseek/brand.json)、[术语映射](products/cinaseek/terminology.json)、[界面 Token](products/cinaseek/tokens.css)。
 
 ```bash

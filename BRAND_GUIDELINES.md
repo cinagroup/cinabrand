@@ -52,6 +52,26 @@
 - 商品包装、吊牌与标签保留完整导出画布，保证图标及文字右上方 ® 的安全留白；不要按图标或字形的边缘裁切，也不要让边框、标签孔位或其他文字遮挡注册标记。整体等比缩放，底板圆角随图标缩放。
 - 这组新增资产使用本地路径，合并后可使用 `main`。发布新标签前不把海内文件指向既有 `v2.1.1` 标签；原有发布版本与 CDN 示例保持不变。
 
+## 海内 · 仿宋商品字标
+
+- 仿宋套件位于 `assets/hainei-fangsong/`，使用 **朱雀仿宋 Regular v0.212**；字体原文件及 [OFL 许可证](sources/fonts/zhuque-fangsong/OFL.txt)随仓库保留，[字体说明](sources/fonts/zhuque-fangsong/README.md)记录来源和校验值。
+- “海内”按字体原始字宽、字距提取矢量轮廓，再等比缩放排版；不做横向拉伸、人工加粗或笔画圆角处理。字体版本固定，正式文件显示不依赖本机安装字体。
+- 横版为 2432 × 1152px，竖版为 1408 × 1792px，独立文字为 1216 × 640px，独立全彩图标为 1280 × 1280px；均有四分之一尺寸 PNG。仿宋文字在横版和独立字标画布中垂直居中，竖版位于图标下方，保持原字形比例。
+- `hainei-fangsong-{horizontal|stacked}-registered` 在图标和文字的右上方分别放置 ®；`hainei-fangsong-{wordmark|symbol}-registered` 各有一个 ®。注册标记继续采用固定 Geist 字体的矢量轮廓，置于主体外部留白内。
+- 黑字版和 `-white` 反白版均提供 PNG、SVG、小尺寸 PNG，同时提供无 `-registered` 的基础版。全彩图标始终沿用核准图案和渐变；独立图标的反白版只改变 ®。
+- 独立仿宋字标与无留白文字 SVG 为纯矢量；含图标的 SVG 内嵌原图标位图。PNG 为透明背景。用于商品、包装和吊牌时保留完整画布、注册标记与周围留白，不按文字或图标边缘裁切。
+- [套件预览](assets/hainei-fangsong/preview.png)展示黑字和反白注册版，[清单](assets/hainei-fangsong/manifest.json)包含完整文件与标记位置。新增资产在新标签发布前使用本地文件路径。
+
+## 海内 · 宋体商品字标
+
+- 宋体套件位于 `assets/hainei-songti/`，采用 **思源宋体 SC Regular 2.003** 的简体中文字形。Adobe 官方原字体及[OFL 许可证](sources/fonts/source-han-serif/OFL.txt)一并保留，[字体说明](sources/fonts/source-han-serif/README.md)记录官方文件指纹及 SHA-256。
+- “海内”保留原字体的轮廓、字宽及字距，并按原比例整体缩放；不人工加粗、横向拉伸或修改笔画。独立文字 SVG 为纯矢量路径，不依赖字体安装。
+- 横版、竖版、独立文字和独立图标的画布分别为 2432 × 1152、1408 × 1792、1216 × 640、1280 × 1280px，并提供四分之一尺寸 PNG。按宋体实际轮廓比例排版，横版与独立字标垂直居中，竖版在图标下方水平居中。
+- `hainei-songti-{horizontal|stacked}-registered` 各有两个 ®，分别对应图标与文字；`hainei-songti-{wordmark|symbol}-registered` 各有一个 ®。标记沿用固定 Geist 矢量轮廓，置于所属主体右上方外部留白内。
+- 同时提供黑字、`-white` 反白及无 `-registered` 的基础版。文字与 ® 随黑白版本变化，全彩图标保留原图；独立图标反白版只改变 ®。
+- PNG 均为透明背景；含图标的 SVG 为图标位图与文字、® 矢量的组合。商品、包装和吊牌使用时整体等比缩放，保留全部画布和注册标记留白。
+- [预览](assets/hainei-songti/preview.png)展示黑字及反白注册版，[清单](assets/hainei-songti/manifest.json)列出全部素材、字体与标记位置。新标签发布前使用本地或 `main` 文件路径。
+
 ## 等比例圆角
 
 - 圆角作用于蓝色方形底板的四个外角，半径为**底板边长的 4.6875%（3/64）**，不作用于内部黑色图案。

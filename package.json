@@ -17,13 +17,15 @@
     "./brand.json": "./brand.json",
     "./heritage": "./assets/heritage/manifest.json",
     "./hainei": "./assets/hainei/manifest.json",
+    "./hainei-fangsong": "./assets/hainei-fangsong/manifest.json",
+    "./hainei-songti": "./assets/hainei-songti/manifest.json",
     "./products/cinaseek": "./products/cinaseek/brand.json",
     "./products/cinaseek/terminology": "./products/cinaseek/terminology.json",
     "./products/cinaseek/tokens.css": "./products/cinaseek/tokens.css"
   },
   "scripts": {
     "build": "node scripts/build-heritage.mjs",
-    "test": "node scripts/validate.mjs && node scripts/verify-heritage.mjs && node scripts/verify-hainei.mjs"
+    "test": "node scripts/validate.mjs && node scripts/verify-heritage.mjs && node scripts/verify-hainei.mjs && node scripts/verify-font-kit.mjs fangsong && node scripts/verify-font-kit.mjs songti"
   },
   "packageManager": "pnpm@11.25.0",
   "devDependencies": {

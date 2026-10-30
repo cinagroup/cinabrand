@@ -1,0 +1,1276 @@
+{
+  "schemaVersion": 1,
+  "version": "2.1.1",
+  "name": "海内 · 仿宋商品字标套件",
+  "wordmark": "海内",
+  "source": {
+    "path": "sources/fonts/zhuque-fangsong/ZhuqueFangsong-Regular.ttf",
+    "sha256": "558c62730844fe54ba220146ed62f859d4e2880188d92d985f8921c6e3743bc4",
+    "text": "海内",
+    "viewBox": "53 -807 1817 919"
+  },
+  "typography": {
+    "chinese": {
+      "family": "Zhuque Fangsong",
+      "chineseFamily": "朱雀仿宋",
+      "style": "Regular",
+      "weight": 400,
+      "release": "0.212",
+      "path": "sources/fonts/zhuque-fangsong/ZhuqueFangsong-Regular.ttf",
+      "sha256": "558c62730844fe54ba220146ed62f859d4e2880188d92d985f8921c6e3743bc4",
+      "url": "https://github.com/TrionesType/zhuque/releases/tag/v0.212",
+      "archiveUrl": "https://github.com/TrionesType/zhuque/releases/download/v0.212/ZhuqueFangsong-v0.212.zip",
+      "archiveSha256": "bb8b661a7643d2296a72d9d10530a00949419c4e527fb61783f73c2ba1a8c062",
+      "license": "SIL Open Font License 1.1",
+      "licensePath": "sources/fonts/zhuque-fangsong/OFL.txt",
+      "text": "海内",
+      "unitsPerEm": 1000,
+      "kerning": true,
+      "glyphIndices": [
+        6270,
+        2400
+      ],
+      "outlines": "unmodified-font-paths"
+    }
+  },
+  "registration": {
+    "symbol": "®",
+    "font": {
+      "family": "Geist",
+      "style": "Regular",
+      "weight": 400,
+      "release": "1.7.2",
+      "path": "sources/fonts/geist/Geist-Regular.otf",
+      "sha256": "16cb657f0dde448dccfe57cbe39a5b59c03cb709922a3451914495c273359f51",
+      "url": "https://github.com/vercel/geist-font/releases/tag/v1.7.2",
+      "license": "SIL Open Font License 1.1",
+      "licensePath": "sources/fonts/geist/OFL.txt"
+    },
+    "viewBox": "45 -726 545 547",
+    "placement": "upper-right-outside-artwork"
+  },
+  "assets": [
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-source.png",
+      "sha256": "004a3722007e466e64c599045ae9df09d1c306fe7dc08de102f44b3cb714010b",
+      "format": "png",
+      "width": 1817,
+      "height": 919,
+      "role": "fangsong-lettering"
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-source.svg",
+      "sha256": "1221ff3345b06dcfdfdd05c5edde5a375936e32557fda2585cbc42c25e0b4cf2",
+      "format": "svg",
+      "width": 1817,
+      "height": 919,
+      "role": "fangsong-lettering",
+      "embeddedRaster": false
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal.svg",
+      "sha256": "3d38d07513e950a5e2acb71f42a678a558cfd126a958ba98bba70a592cc9a247",
+      "format": "svg",
+      "width": 2432,
+      "height": 1152,
+      "embeddedRaster": true,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 327.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal.png",
+      "sha256": "55b00b30aa89f1bec75d10bd8c546bb232ec20f3bc918c0d47eeb50ac1fc1432",
+      "format": "png",
+      "width": 2432,
+      "height": 1152,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 327.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-608.png",
+      "sha256": "c1f28b37207944d9af7162e5933b4151cdfaab10fd7dad088b7153bd83eb436a",
+      "format": "png",
+      "width": 608,
+      "height": 288,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "letteringFrame": {
+        "x": 328,
+        "y": 81.97888002201431,
+        "width": 245.25,
+        "height": 124.04223995597138
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-white.svg",
+      "sha256": "bd757ca0c908e48feeb1fbdfb6adf0e7a45c04fd88e8f866962f4b70028896d9",
+      "format": "svg",
+      "width": 2432,
+      "height": 1152,
+      "embeddedRaster": true,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 327.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-white.png",
+      "sha256": "666890049e58beb36d4abd5dc4bbd90bc0343be1d83ad517c912afa0e394e8c5",
+      "format": "png",
+      "width": 2432,
+      "height": 1152,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 327.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-white-608.png",
+      "sha256": "5fdb397d65c97ba54a77d8b5560c0279612987ef9bdb41c679ba909fe5fb749f",
+      "format": "png",
+      "width": 608,
+      "height": 288,
+      "layout": "horizontal",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "letteringFrame": {
+        "x": 328,
+        "y": 81.97888002201431,
+        "width": 245.25,
+        "height": 124.04223995597138
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-registered.svg",
+      "sha256": "c2df4812079e549886058e7b36c372eef43fd10bc8f0861c4cf9efaa74e90aeb",
+      "format": "svg",
+      "width": 2432,
+      "height": 1152,
+      "embeddedRaster": true,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1104,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 2309,
+          "y": 295.91552008805724,
+          "size": 64
+        }
+      ],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 327.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-registered.png",
+      "sha256": "9bde3d9e655d0343bad4d5e9ad1264b5c08a91f22d67e351805220b5f798ef9f",
+      "format": "png",
+      "width": 2432,
+      "height": 1152,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1104,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 2309,
+          "y": 295.91552008805724,
+          "size": 64
+        }
+      ],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 327.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-registered-608.png",
+      "sha256": "fbf741494961ec15040bbd16fe37d35a9d1f7420afa596cdd672a66a9da99814",
+      "format": "png",
+      "width": 608,
+      "height": 288,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 276,
+          "y": 16,
+          "size": 20
+        },
+        {
+          "owner": "lettering",
+          "x": 577.25,
+          "y": 73.97888002201431,
+          "size": 16
+        }
+      ],
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "letteringFrame": {
+        "x": 328,
+        "y": 81.97888002201431,
+        "width": 245.25,
+        "height": 124.04223995597138
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-registered-white.svg",
+      "sha256": "adb737f780d8c1d9f5443d000003bb6992e5a33582d6dcb23197faa83adcd785",
+      "format": "svg",
+      "width": 2432,
+      "height": 1152,
+      "embeddedRaster": true,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1104,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 2309,
+          "y": 295.91552008805724,
+          "size": 64
+        }
+      ],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 327.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-registered-white.png",
+      "sha256": "036087335b53fbb68537a55435066771ed3557c30de3a9fd380ff1fcda8a10b4",
+      "format": "png",
+      "width": 2432,
+      "height": 1152,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1104,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 2309,
+          "y": 295.91552008805724,
+          "size": 64
+        }
+      ],
+      "symbolFrame": {
+        "x": 64,
+        "y": 64,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48,
+      "letteringFrame": {
+        "x": 1312,
+        "y": 327.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-horizontal-registered-white-608.png",
+      "sha256": "73fbc1f7275ea22c0d5b6b9413617f78f286f71930e64fcca51a3faafd656682",
+      "format": "png",
+      "width": 608,
+      "height": 288,
+      "layout": "horizontal",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 276,
+          "y": 16,
+          "size": 20
+        },
+        {
+          "owner": "lettering",
+          "x": 577.25,
+          "y": 73.97888002201431,
+          "size": 16
+        }
+      ],
+      "symbolFrame": {
+        "x": 16,
+        "y": 16,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12,
+      "letteringFrame": {
+        "x": 328,
+        "y": 81.97888002201431,
+        "width": 245.25,
+        "height": 124.04223995597138
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked.svg",
+      "sha256": "5c86ef85cdbc71fb3aaec068f13e8963fa29429bad0a0047991cda7c697a8632",
+      "format": "svg",
+      "width": 1408,
+      "height": 1792,
+      "embeddedRaster": true,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 598.842047330765
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked.png",
+      "sha256": "88d2152dd9d133545001fc50f15af6ca83adcfb92e70b03a53eae540097d854d",
+      "format": "png",
+      "width": 1408,
+      "height": 1792,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 598.842047330765
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-352.png",
+      "sha256": "f6211f528918e0ac91db474dea81f705ce306ad46b3736f0ab8d88078716b362",
+      "format": "png",
+      "width": 352,
+      "height": 448,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "letteringFrame": {
+        "x": 28,
+        "y": 278,
+        "width": 296,
+        "height": 149.71051183269125
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-white.svg",
+      "sha256": "278408c1350f62122a8db77b49736c0fdb0dfda097fdaa799312dc7dfbc0534e",
+      "format": "svg",
+      "width": 1408,
+      "height": 1792,
+      "embeddedRaster": true,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 598.842047330765
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-white.png",
+      "sha256": "4dabd923d3123e348c8d78004b39a8be0b85164fd31fcd3664878831d7682223",
+      "format": "png",
+      "width": 1408,
+      "height": 1792,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 598.842047330765
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-white-352.png",
+      "sha256": "e9580043187636acc86d35419af9ec0bebc113c77fdfd01f35faa5ddb35ba5be",
+      "format": "png",
+      "width": 352,
+      "height": 448,
+      "layout": "stacked",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "letteringFrame": {
+        "x": 28,
+        "y": 278,
+        "width": 296,
+        "height": 149.71051183269125
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-registered.svg",
+      "sha256": "9eb55ab590352be049acef4e75a2f96eec9d15c1f136296ca4870ae773e3442e",
+      "format": "svg",
+      "width": 1408,
+      "height": 1792,
+      "embeddedRaster": true,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1200,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 1312,
+          "y": 1084,
+          "size": 56
+        }
+      ],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 598.842047330765
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-registered.png",
+      "sha256": "fdb925a32c1b47bf7a39ea35ad7ebd28e73979c7b6bffb9f06caf240b8a7a7e0",
+      "format": "png",
+      "width": 1408,
+      "height": 1792,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1200,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 1312,
+          "y": 1084,
+          "size": 56
+        }
+      ],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 598.842047330765
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-registered-352.png",
+      "sha256": "00a091583a57ddae592b3fd1b29ab38fd0a54a0e1d83fe868a9541e113753419",
+      "format": "png",
+      "width": 352,
+      "height": 448,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 300,
+          "y": 16,
+          "size": 20
+        },
+        {
+          "owner": "lettering",
+          "x": 328,
+          "y": 271,
+          "size": 14
+        }
+      ],
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "letteringFrame": {
+        "x": 28,
+        "y": 278,
+        "width": 296,
+        "height": 149.71051183269125
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-registered-white.svg",
+      "sha256": "5c47f9fbafb35d3625adfdf18d22c0e7c73d42562c8ffc73ef76b25bc06fe255",
+      "format": "svg",
+      "width": 1408,
+      "height": 1792,
+      "embeddedRaster": true,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1200,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 1312,
+          "y": 1084,
+          "size": 56
+        }
+      ],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 598.842047330765
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-registered-white.png",
+      "sha256": "68cd524f1e650e247d51e5562b06f2760914639b211a0879b83feed692bcef68",
+      "format": "png",
+      "width": 1408,
+      "height": 1792,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1200,
+          "y": 64,
+          "size": 80
+        },
+        {
+          "owner": "lettering",
+          "x": 1312,
+          "y": 1084,
+          "size": 56
+        }
+      ],
+      "symbolFrame": {
+        "x": 224,
+        "y": 64,
+        "size": 960
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 45,
+      "letteringFrame": {
+        "x": 112,
+        "y": 1112,
+        "width": 1184,
+        "height": 598.842047330765
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-stacked-registered-white-352.png",
+      "sha256": "1eb4103fb26520cdff762a381bb8be4736feeb9a04e0abb3793b2338c9817b5e",
+      "format": "png",
+      "width": 352,
+      "height": 448,
+      "layout": "stacked",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 300,
+          "y": 16,
+          "size": 20
+        },
+        {
+          "owner": "lettering",
+          "x": 328,
+          "y": 271,
+          "size": 14
+        }
+      ],
+      "symbolFrame": {
+        "x": 56,
+        "y": 16,
+        "size": 240
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 11.25,
+      "letteringFrame": {
+        "x": 28,
+        "y": 278,
+        "width": 296,
+        "height": 149.71051183269125
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark.svg",
+      "sha256": "96ba890a722e9b86b14c24a485c5acc3cc05a78266bed5b83ad99a2e15dbf68a",
+      "format": "svg",
+      "width": 1216,
+      "height": 640,
+      "embeddedRaster": false,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 64,
+        "y": 71.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark.png",
+      "sha256": "fe1e830a5819afcedf92c5f66be42022777cdb7f44c2b9c2d06cf36d599acf06",
+      "format": "png",
+      "width": 1216,
+      "height": 640,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 64,
+        "y": 71.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-304.png",
+      "sha256": "789a446c059e0fd61e1c61b9607fd6a12db515c7328f3324520fd5b4de18242b",
+      "format": "png",
+      "width": 304,
+      "height": 160,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 16,
+        "y": 17.97888002201431,
+        "width": 245.25,
+        "height": 124.04223995597138
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-white.svg",
+      "sha256": "25503b085122073cadf9c8c330517e1e324e7ff598b19d3c4669e42950b020bf",
+      "format": "svg",
+      "width": 1216,
+      "height": 640,
+      "embeddedRaster": false,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 64,
+        "y": 71.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-white.png",
+      "sha256": "d6fb0a882ee366cb5f635958c248edfaa2f1de90a1d6f107b48db049af4200c8",
+      "format": "png",
+      "width": 1216,
+      "height": 640,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 64,
+        "y": 71.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-white-304.png",
+      "sha256": "1d9b76b937ae5fadddc7b212fe6d8748b08329867818b14dd6b01d1e66bd7882",
+      "format": "png",
+      "width": 304,
+      "height": 160,
+      "layout": "wordmark",
+      "registered": false,
+      "tone": "white",
+      "registrationMarks": [],
+      "letteringFrame": {
+        "x": 16,
+        "y": 17.97888002201431,
+        "width": 245.25,
+        "height": 124.04223995597138
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-registered.svg",
+      "sha256": "78e33d0b7af0eae1c0de0ada54b329710f2ffab5378a8f8a5e28284fcd631fc1",
+      "format": "svg",
+      "width": 1216,
+      "height": 640,
+      "embeddedRaster": false,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 1061,
+          "y": 39.915520088057235,
+          "size": 64
+        }
+      ],
+      "letteringFrame": {
+        "x": 64,
+        "y": 71.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-registered.png",
+      "sha256": "9269c7c7d8c1c560485cee02696ff04209218aa133cd8887f6f88138279fb689",
+      "format": "png",
+      "width": 1216,
+      "height": 640,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 1061,
+          "y": 39.915520088057235,
+          "size": 64
+        }
+      ],
+      "letteringFrame": {
+        "x": 64,
+        "y": 71.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-registered-304.png",
+      "sha256": "6b405a51adcef8d7077ab135431d4430f7497d0bee19ef5c0393ffd2ba5d3812",
+      "format": "png",
+      "width": 304,
+      "height": 160,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 265.25,
+          "y": 9.978880022014309,
+          "size": 16
+        }
+      ],
+      "letteringFrame": {
+        "x": 16,
+        "y": 17.97888002201431,
+        "width": 245.25,
+        "height": 124.04223995597138
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-registered-white.svg",
+      "sha256": "6759184d21af8f05d6f5f1be9cc647c6127cf4fc505e574897ec8c2b75d1812e",
+      "format": "svg",
+      "width": 1216,
+      "height": 640,
+      "embeddedRaster": false,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 1061,
+          "y": 39.915520088057235,
+          "size": 64
+        }
+      ],
+      "letteringFrame": {
+        "x": 64,
+        "y": 71.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-registered-white.png",
+      "sha256": "b3c3fc20a706bad2039e68a4e6b47ab6a729e5f267173e2a5ccf406aeb6f941e",
+      "format": "png",
+      "width": 1216,
+      "height": 640,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 1061,
+          "y": 39.915520088057235,
+          "size": 64
+        }
+      ],
+      "letteringFrame": {
+        "x": 64,
+        "y": 71.91552008805724,
+        "width": 981,
+        "height": 496.16895982388553
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-wordmark-registered-white-304.png",
+      "sha256": "33b676ec7f6d318ef613e41f1a3f35deb106a18d70f4c2b540fe7c19d590bd11",
+      "format": "png",
+      "width": 304,
+      "height": 160,
+      "layout": "wordmark",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "lettering",
+          "x": 265.25,
+          "y": 9.978880022014309,
+          "size": 16
+        }
+      ],
+      "letteringFrame": {
+        "x": 16,
+        "y": 17.97888002201431,
+        "width": 245.25,
+        "height": 124.04223995597138
+      }
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol.svg",
+      "sha256": "0eef9f8807b1df15c43cbace0068d1f22ecb939c17745256b0643776c3e481ff",
+      "format": "svg",
+      "width": 1280,
+      "height": 1280,
+      "embeddedRaster": true,
+      "layout": "symbol",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol.png",
+      "sha256": "11f89f33925bd5bf0bd54c28e455356f8c602e8f8ebf15f97d7206df034ae2f7",
+      "format": "png",
+      "width": 1280,
+      "height": 1280,
+      "layout": "symbol",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol-320.png",
+      "sha256": "e49f64dd645d8bdc55368a6750ab10d2cd7b10ae2430beee6ef74855b80d2836",
+      "format": "png",
+      "width": 320,
+      "height": 320,
+      "layout": "symbol",
+      "registered": false,
+      "tone": "black",
+      "registrationMarks": [],
+      "symbolFrame": {
+        "x": 32,
+        "y": 32,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol-registered.svg",
+      "sha256": "6cd8af054a072800227d657bb99618dc1248b221b9d91ff70e1b665aa80cd135",
+      "format": "svg",
+      "width": 1280,
+      "height": 1280,
+      "embeddedRaster": true,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1168,
+          "y": 96,
+          "size": 80
+        }
+      ],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol-registered.png",
+      "sha256": "db6818cffe92e5d0cf2a16025ca8915b7a18f499ad1ac9ee9c16c2b5d1d83945",
+      "format": "png",
+      "width": 1280,
+      "height": 1280,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1168,
+          "y": 96,
+          "size": 80
+        }
+      ],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol-registered-320.png",
+      "sha256": "d2f3b1a66ef3dfbca210080c5c77fe8bdb19d8bfe8a9d3b21b70056c3f2809d1",
+      "format": "png",
+      "width": 320,
+      "height": 320,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "black",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 292,
+          "y": 24,
+          "size": 20
+        }
+      ],
+      "symbolFrame": {
+        "x": 32,
+        "y": 32,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol-registered-white.svg",
+      "sha256": "574381741fa9f0b54871e436c8143cb06c0773d6563908a0a7f635344143ebdd",
+      "format": "svg",
+      "width": 1280,
+      "height": 1280,
+      "embeddedRaster": true,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1168,
+          "y": 96,
+          "size": 80
+        }
+      ],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol-registered-white.png",
+      "sha256": "1c770b1acbe55cf00e5cbd8f524bea44462697204da6c8b0d953908e3a2768bb",
+      "format": "png",
+      "width": 1280,
+      "height": 1280,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 1168,
+          "y": 96,
+          "size": 80
+        }
+      ],
+      "symbolFrame": {
+        "x": 128,
+        "y": 128,
+        "size": 1024
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 48
+    },
+    {
+      "path": "assets/hainei-fangsong/hainei-fangsong-symbol-registered-white-320.png",
+      "sha256": "6bc0b1f733977ca9d51f140ee4a4b970adf5b642cd1074691dbd2773ce298fd1",
+      "format": "png",
+      "width": 320,
+      "height": 320,
+      "layout": "symbol",
+      "registered": true,
+      "tone": "white",
+      "registrationMarks": [
+        {
+          "owner": "symbol",
+          "x": 292,
+          "y": 24,
+          "size": 20
+        }
+      ],
+      "symbolFrame": {
+        "x": 32,
+        "y": 32,
+        "size": 256
+      },
+      "cornerRadiusRatio": 0.046875,
+      "cornerRadiusPx": 12
+    },
+    {
+      "path": "assets/hainei-fangsong/preview.png",
+      "sha256": "01fc676bfaa1bce7cff62339f2d6918c4da9abcef0d076b1c2ff135f6c2e661d",
+      "format": "png",
+      "width": 1600,
+      "height": 1920,
+      "role": "preview"
+    }
+  ]
+}
